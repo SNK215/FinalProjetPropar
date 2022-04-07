@@ -8,13 +8,16 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\CallbackTransformer;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 class RegistrationType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('username')
+            ->add('username', null, [
+                "help" => "L'email doit être valide"
+            ])
             ->add('roles', ChoiceType::class, [
                 'required' => true,
                 'multiple' => false,
@@ -25,9 +28,14 @@ class RegistrationType extends AbstractType
                     "Apprenti" => "ROLE_USER",
                 ],
                 ])
-            ->add('password')
-            ->add("nom")
-            ->add("prenom")
+            ->add('password', PasswordType::class)
+            ->add("confirm_password", PasswordType::class)
+            ->add("nom",null, [
+                'help' => 'Votre nom ne peut pas contenir de chiffres'
+            ])
+            ->add("prenom",null, [
+                'help' => 'Votre prénom ne peut pas contenir de chiffres'
+            ])
         ;
     
 

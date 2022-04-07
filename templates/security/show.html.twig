@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Index utilisateurs
+{% endblock %}
+
+{% block body %}
+
+	{% for user in users %}
+
+		<div class="card" style="width: 20rem;">
+			<div class="card-body">
+				<h5 class="card-title">Nom complet : {{ user.nom }} {{ user.prenom }}</h5>
+				<h6 class="card-subtitle mb-2 text-muted">
+
+					{% if 'ROLE_SUPER_ADMIN' in user.getroles(TRUE)  %}
+						<p>Cet utilisateur a le profil "Expert".</p>
+					{% endif %}
+
+					{% if 'ROLE_ADMIN' in user.getroles(TRUE)  %}
+						<p>Cet utilisateur a le profil "Senior".</p>
+					{% endif %}
+
+					{% if 'ROLE_USER' in user.getroles(TRUE)  %}
+						<p>Cet utilisateur a le profil "Apprenti".</p>
+					{% endif %}
+
+				</h6>
+				<p class="card-text">Adresse mail :
+					{{ user.username }}</p>
+				<a href="#" class="btn btn-primary">Détails</a>
+			</div>
+		</div>
+
+
+	{% endfor %}
+
+{% endblock %}

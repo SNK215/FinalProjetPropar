@@ -13,12 +13,13 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/index' => [[['_route' => 'app_index', '_controller' => 'App\\Controller\\ProjetController::index'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'app_index', '_controller' => 'App\\Controller\\ProjetController::index'], null, null, null, false, false, null]],
         '/profile/home' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\ProjetController::home'], null, null, null, false, false, null]],
         '/profile/operation' => [[['_route' => 'app_operation', '_controller' => 'App\\Controller\\ProjetController::listOperation'], null, null, null, false, false, null]],
         '/superadmin/registration' => [[['_route' => 'app_registration', '_controller' => 'App\\Controller\\SecurityController::registration'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, ['GET' => 0], null, false, false, null]],
+        '/superadmin/show' => [[['_route' => 'app_show_users', '_controller' => 'App\\Controller\\SecurityController::show'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

@@ -15,10 +15,11 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
-    'app_index' => [[], ['_controller' => 'App\\Controller\\ProjetController::index'], [], [['text', '/index']], [], []],
+    'app_index' => [[], ['_controller' => 'App\\Controller\\ProjetController::index'], [], [['text', '/']], [], []],
     'app_home' => [[], ['_controller' => 'App\\Controller\\ProjetController::home'], [], [['text', '/profile/home']], [], []],
     'app_operation' => [[], ['_controller' => 'App\\Controller\\ProjetController::listOperation'], [], [['text', '/profile/operation']], [], []],
     'app_registration' => [[], ['_controller' => 'App\\Controller\\SecurityController::registration'], [], [['text', '/superadmin/registration']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
+    'app_show_users' => [[], ['_controller' => 'App\\Controller\\SecurityController::show'], [], [['text', '/superadmin/show']], [], []],
 ];

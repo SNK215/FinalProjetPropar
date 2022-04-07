@@ -32,18 +32,35 @@ class User implements UserInterface
     private $roles = [];
 
     /**
-     * @var string The hashed password
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min="8", minMessage="Votre mot de passe doit faire au moins 8 caractères !")
+     * @Assert\EqualTo(propertyPath="confirm_password", message="Les mots de passe ne correspondent pas !")
      */
     private $password;
 
     /**
+     * 
+     * @Assert\EqualTo(propertyPath="password", message="Les mots de passe ne correspondent pas !")
+     */
+    public $confirm_password;
+
+    /**
      * @ORM\Column(type="string", length=180)
+     * @Assert\Regex(
+     *     pattern="/\d/",
+     *     match=false,
+     *     message="Your name cannot contain a number"
+     * )
      */
     private $prenom;
 
     /**
      * @ORM\Column(type="string", length=180)
+     * @Assert\Regex(
+     *     pattern="/\d/",
+     *     match=false,
+     *     message="Your name cannot contain a number"
+     * )
      */
     private $nom;
 

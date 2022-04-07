@@ -66,6 +66,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
         // line 18
         echo "
 \t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">
+\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>
 
 \t</head>
 \t<body>
@@ -79,49 +80,67 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t\t\t\t<div class=\"navbar-nav\">
 
 \t\t\t\t\t\t";
-        // line 32
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 32, $this->source); })()), "user", [], "any", false, false, false, 32)) {
-            // line 33
-            echo "\t\t\t\t\t\t    <a class=\"nav-link\" href=\"/index\">Accueil</a>
-                        ";
+        // line 33
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "user", [], "any", false, false, false, 33)) {
+            // line 34
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/index\">Accueil</a>
+\t\t\t\t\t\t";
         } else {
-            // line 35
-            echo "                            <a class=\"nav-link\" href=\"/profile/home\">Accueil</a>
-                        ";
+            // line 36
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/profile/home\">Accueil</a>
+\t\t\t\t\t\t";
         }
-        // line 37
-        echo "\t\t\t\t\t\t
-
-                        ";
+        // line 38
+        echo "
+\t\t\t\t\t\t";
         // line 39
         if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "user", [], "any", false, false, false, 39)) {
             // line 40
-            echo "\t\t\t\t\t\t    <a class=\"nav-link\" href=\"/login\">Connexion</a>
-                        ";
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/login\">Connexion</a>
+\t\t\t\t\t\t";
         } else {
             // line 42
-            echo "                            <a class=\"nav-link\" href=\"/logout\">Déconnexion</a>
-                        ";
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/logout\">Déconnexion</a>
+\t\t\t\t\t\t";
         }
         // line 44
         echo "
+
 \t\t\t\t\t\t";
-        // line 45
+        // line 46
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
-            // line 46
-            echo "\t\t\t\t\t\t    <a class=\"nav-link\" href=\"/superadmin/registration\">Enregistrer user</a>
-                        ";
+            // line 47
+            echo "\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\tGestion d'utilisateurs
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/show\">Voir les utilisateurs</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/registration\">Ajouter</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Modifier</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Supprimer</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t";
         }
-        // line 48
+        // line 67
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
 \t\t";
-        // line 53
+        // line 72
         $this->displayBlock('body', $context, $blocks);
-        // line 54
+        // line 73
         echo "\t</body>
 </html>
 ";
@@ -197,7 +216,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 
     }
 
-    // line 53
+    // line 72
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -227,7 +246,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 
     public function getDebugInfo()
     {
-        return array (  201 => 53,  191 => 17,  189 => 16,  179 => 15,  169 => 13,  167 => 12,  157 => 11,  137 => 6,  125 => 54,  123 => 53,  116 => 48,  112 => 46,  110 => 45,  107 => 44,  103 => 42,  99 => 40,  97 => 39,  93 => 37,  89 => 35,  85 => 33,  83 => 32,  67 => 18,  65 => 15,  62 => 14,  59 => 11,  56 => 8,  54 => 6,  47 => 1,);
+        return array (  220 => 72,  210 => 17,  208 => 16,  198 => 15,  188 => 13,  186 => 12,  176 => 11,  156 => 6,  144 => 73,  142 => 72,  135 => 67,  113 => 47,  111 => 46,  107 => 44,  103 => 42,  99 => 40,  97 => 39,  94 => 38,  90 => 36,  86 => 34,  84 => 33,  67 => 18,  65 => 15,  62 => 14,  59 => 11,  56 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -241,7 +260,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t\t{% endblock %}
 \t\t</title>
 \t\t{# Run `composer require symfony/webpack-encore-bundle`
-\t\t           and uncomment the following Encore helpers to start using Symfony UX #}
+\t\t\t\t\t\t           and uncomment the following Encore helpers to start using Symfony UX #}
 \t\t{% block stylesheets %}
 \t\t\t{#{{ encore_entry_link_tags('app') }}#}
 \t\t{% endblock %}
@@ -251,6 +270,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t{% endblock %}
 
 \t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">
+\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>
 
 \t</head>
 \t<body>
@@ -264,21 +284,39 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t\t\t\t<div class=\"navbar-nav\">
 
 \t\t\t\t\t\t{% if not app.user %}
-\t\t\t\t\t\t    <a class=\"nav-link\" href=\"/index\">Accueil</a>
-                        {% else %}
-                            <a class=\"nav-link\" href=\"/profile/home\">Accueil</a>
-                        {% endif %}
-\t\t\t\t\t\t
+\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/index\">Accueil</a>
+\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/profile/home\">Accueil</a>
+\t\t\t\t\t\t{% endif %}
 
-                        {% if not app.user %}
-\t\t\t\t\t\t    <a class=\"nav-link\" href=\"/login\">Connexion</a>
-                        {% else %}
-                            <a class=\"nav-link\" href=\"/logout\">Déconnexion</a>
-                        {% endif %}
+\t\t\t\t\t\t{% if not app.user %}
+\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/login\">Connexion</a>
+\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/logout\">Déconnexion</a>
+\t\t\t\t\t\t{% endif %}
+
 
 \t\t\t\t\t\t{% if is_granted(\"ROLE_SUPER_ADMIN\") %}
-\t\t\t\t\t\t    <a class=\"nav-link\" href=\"/superadmin/registration\">Enregistrer user</a>
-                        {% endif %}
+\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\tGestion d'utilisateurs
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/show\">Voir les utilisateurs</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/registration\">Ajouter</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Modifier</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Supprimer</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t{% endif %}
 
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -287,6 +325,6 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t{% block body %}{% endblock %}
 \t</body>
 </html>
-", "base.html.twig", "C:\\Users\\User1\\Documents\\ProjetTest\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\User1\\Documents\\ProjetPropar\\templates\\base.html.twig");
     }
 }
