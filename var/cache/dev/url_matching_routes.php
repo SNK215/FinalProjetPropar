@@ -38,6 +38,10 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/superadmin/(?'
+                    .'|delete/([^/]++)(*:199)'
+                    .'|([^/]++)/edit(*:220)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -47,8 +51,10 @@ return [
         116 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        159 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        199 => [[['_route' => 'app_delete', '_controller' => 'App\\Controller\\ProjetController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        220 => [
+            [['_route' => 'app_edit_user', '_controller' => 'App\\Controller\\SecurityController::registration'], ['id'], null, null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

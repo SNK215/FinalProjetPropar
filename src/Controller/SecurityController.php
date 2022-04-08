@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
@@ -17,9 +18,14 @@ class SecurityController extends AbstractController
 {
      /**
      * @Route("/superadmin/registration", name="app_registration")
+     * @Route("/superadmin/{id}/edit", name="app_edit_user")
      */
-    public function registration(Request $request, EntityManagerInterface $manager, UserPasswordEncoderInterface $encoder) {
-        $user = new User();
+    public function registration(User $user = null, Request $request, EntityManagerInterface $manager, UserPasswordEncoderInterface $encoder) {
+        
+        if (!$user) {
+            $user = new User();
+        }
+        
 
         $form = $this->createForm(RegistrationType::class, $user);
 
@@ -31,11 +37,12 @@ class SecurityController extends AbstractController
             $manager->persist($user);
             $manager->flush();
 
-            return $this->redirectToRoute("app_home");
+            return $this->redirectToRoute("app_show_users");
         }
 
         return $this->render("security/registration.html.twig", [
-            "form" => $form->createView()
+            "form" => $form->createView(),
+            "editMode" => $user->getId() !== null
         ]);
     }
 
@@ -70,8 +77,8 @@ class SecurityController extends AbstractController
      */
     public function show(UserRepository $repo): Response
     {
-        $users = $repo->findByRole();
-        return $this->render('security/show2.html.twig', [
+        $users = $repo->findAll();
+        return $this->render('security/show.html.twig', [
             'controller_name' => 'SecurityController',
             "users" => $users
         ]);

@@ -2,9 +2,13 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\UserRepository;
+use App\Entity\User;
+
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ProjetController extends AbstractController
 {
@@ -36,5 +40,17 @@ class ProjetController extends AbstractController
         return $this->render('projet/listOperation.html.twig', [
             'controller_name' => 'ProjetController',
         ]);
+    }
+
+    /**
+     * @Route("/superadmin/delete/{id}", name="app_delete", methods={"POST"})
+     */
+    public function delete(Request $request, User $user, UserRepository $userRepository): Response
+    {
+        if ($this->isCsrfTokenValid('delete' . $user->getId(), $request->request->get('_token'))) {
+            $userRepository->remove($user);
+        }
+
+        return $this->redirectToRoute('app_show_users', [], Response::HTTP_SEE_OTHER);
     }
 }

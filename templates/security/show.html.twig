@@ -5,33 +5,73 @@
 
 {% block body %}
 
-	{% for user in users %}
 
-		<div class="card" style="width: 20rem;">
-			<div class="card-body">
-				<h5 class="card-title">Nom complet : {{ user.nom }} {{ user.prenom }}</h5>
-				<h6 class="card-subtitle mb-2 text-muted">
+	<table class="table">
+		<thead class="table-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Nom</th>
+				<th scope="col">Prénom</th>
+				<th scope="col">Adresse mail</th>
+				<th scope="col">Role</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
 
-					{% if 'ROLE_SUPER_ADMIN' in user.getroles(TRUE)  %}
-						<p>Cet utilisateur a le profil "Expert".</p>
-					{% endif %}
+				{% for user in users %}
 
-					{% if 'ROLE_ADMIN' in user.getroles(TRUE)  %}
-						<p>Cet utilisateur a le profil "Senior".</p>
-					{% endif %}
+					<th scope="row">{{ user.id }}</th>
+					<td>{{ user.nom }}</td>
+					<td>{{ user.prenom }}</td>
+					<td>{{ user.username }}</td>
+					<td>
+						{% if 'ROLE_SUPER_ADMIN' in user.getroles(TRUE)  %}
+							<p>Expert</p>
+						{% endif %}
 
-					{% if 'ROLE_USER' in user.getroles(TRUE)  %}
-						<p>Cet utilisateur a le profil "Apprenti".</p>
-					{% endif %}
+						{% if 'ROLE_ADMIN' in user.getroles(TRUE)  %}
+							<p>Senior</p>
+						{% endif %}
 
-				</h6>
-				<p class="card-text">Adresse mail :
-					{{ user.username }}</p>
-				<a href="#" class="btn btn-primary">Détails</a>
-			</div>
-		</div>
+						{% if 'ROLE_USER' in user.getroles(TRUE)  %}
+							<p>Apprenti</p>
+						{% endif %}
+					</td>
+					<td>
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+								Action
+							</button>
+							<ul class="dropdown-menu">
+								<li>
+									<a class="dropdown-item" href="#">
+										<form method="post" action="{{ path('app_delete', {'id': user.id}) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer cet utilisateur  ?');">
+											<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ user.id) }}">
+											<button class="btn">Supprimer</button>
+										</form>
+									</a>
+								</li>
+								<li>
+									<a class="dropdown-item" href="#">
+										<form method="post" action="{{ path("app_edit_user", {"id" : user.id}) }}" onsubmit="return confirm('Voulez-vous vraiment modifier cet utilisateur  ?');">
+
+											<button class="btn">Modifier</button>
+										</form>
+									</a>
+
+								</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+
+			{% endfor %}
 
 
-	{% endfor %}
+		</tbody>
+	</table>
+
 
 {% endblock %}

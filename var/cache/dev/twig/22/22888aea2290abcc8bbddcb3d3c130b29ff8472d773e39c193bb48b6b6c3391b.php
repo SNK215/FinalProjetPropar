@@ -87,7 +87,7 @@ class __TwigTemplate_bfe2728114a71766a5cd8f164f4a77958bccc23b0a32be5e282bff2f5a0
 
         // line 7
         echo "
-\t<h1>Bienvenue sur votre tableau de bord</h1>
+\t<h1 style=\"text-align:center\">Bienvenue sur votre tableau de bord</h1>
 
 ";
         
@@ -122,9 +122,9 @@ class __TwigTemplate_bfe2728114a71766a5cd8f164f4a77958bccc23b0a32be5e282bff2f5a0
 
 {% block body %}
 
-\t<h1>Bienvenue sur votre tableau de bord</h1>
+\t<h1 style=\"text-align:center\">Bienvenue sur votre tableau de bord</h1>
 
 {% endblock %}
-", "projet/home.html.twig", "C:\\Users\\User1\\Documents\\ProjetTest\\templates\\projet\\home.html.twig");
+", "projet/home.html.twig", "C:\\Users\\User1\\Documents\\ProjetPropar\\templates\\projet\\home.html.twig");
     }
 }

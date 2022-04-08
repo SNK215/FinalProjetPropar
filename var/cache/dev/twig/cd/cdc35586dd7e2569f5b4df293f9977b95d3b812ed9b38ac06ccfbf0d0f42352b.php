@@ -72,7 +72,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t<body>
 \t\t<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
 \t\t\t<div class=\"container-fluid\">
-\t\t\t\t<a class=\"navbar-brand\" href=\"/index\">Projet Propar</a>
+\t\t\t\t<a class=\"navbar-brand\" href=\"/\">Projet Propar</a>
 \t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
 \t\t\t\t\t<span class=\"navbar-toggler-icon\"></span>
 \t\t\t\t</button>
@@ -83,7 +83,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
         // line 33
         if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "user", [], "any", false, false, false, 33)) {
             // line 34
-            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/index\">Accueil</a>
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/\">Accueil</a>
 \t\t\t\t\t\t";
         } else {
             // line 36
@@ -119,28 +119,22 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/show\">Voir les utilisateurs</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/registration\">Ajouter</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Modifier</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Supprimer</a>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/registration\">Nouvel utilisateur</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         }
-        // line 67
+        // line 61
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
 \t\t";
-        // line 72
+        // line 66
         $this->displayBlock('body', $context, $blocks);
-        // line 73
+        // line 67
         echo "\t</body>
 </html>
 ";
@@ -216,7 +210,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 
     }
 
-    // line 72
+    // line 66
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -246,7 +240,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 
     public function getDebugInfo()
     {
-        return array (  220 => 72,  210 => 17,  208 => 16,  198 => 15,  188 => 13,  186 => 12,  176 => 11,  156 => 6,  144 => 73,  142 => 72,  135 => 67,  113 => 47,  111 => 46,  107 => 44,  103 => 42,  99 => 40,  97 => 39,  94 => 38,  90 => 36,  86 => 34,  84 => 33,  67 => 18,  65 => 15,  62 => 14,  59 => 11,  56 => 8,  54 => 6,  47 => 1,);
+        return array (  214 => 66,  204 => 17,  202 => 16,  192 => 15,  182 => 13,  180 => 12,  170 => 11,  150 => 6,  138 => 67,  136 => 66,  129 => 61,  113 => 47,  111 => 46,  107 => 44,  103 => 42,  99 => 40,  97 => 39,  94 => 38,  90 => 36,  86 => 34,  84 => 33,  67 => 18,  65 => 15,  62 => 14,  59 => 11,  56 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -276,7 +270,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t<body>
 \t\t<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
 \t\t\t<div class=\"container-fluid\">
-\t\t\t\t<a class=\"navbar-brand\" href=\"/index\">Projet Propar</a>
+\t\t\t\t<a class=\"navbar-brand\" href=\"/\">Projet Propar</a>
 \t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
 \t\t\t\t\t<span class=\"navbar-toggler-icon\"></span>
 \t\t\t\t</button>
@@ -284,7 +278,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t\t\t\t<div class=\"navbar-nav\">
 
 \t\t\t\t\t\t{% if not app.user %}
-\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/index\">Accueil</a>
+\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/\">Accueil</a>
 \t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/profile/home\">Accueil</a>
 \t\t\t\t\t\t{% endif %}
@@ -306,13 +300,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/show\">Voir les utilisateurs</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/registration\">Ajouter</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Modifier</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Supprimer</a>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/registration\">Nouvel utilisateur</a>
 \t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</li>

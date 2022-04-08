@@ -91,7 +91,7 @@ class __TwigTemplate_990166d841d7e894a877e473096d4e8a09cccc7049bb21a073acad7db44
         // line 8
         if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "user", [], "any", false, false, false, 8)) {
             // line 9
-            echo "\t\t<div>
+            echo "\t\t<div style=\"text-align:center\">
 \t\t\t<h1>Vous n'êtes pas connecté</h1>
 \t\t\t<h2>Page visible par tous les utilisateurs</h2>
 \t\t\t<h3>Page d'accueil pour les utilisateurs non connecté</h3>
@@ -141,7 +141,7 @@ class __TwigTemplate_990166d841d7e894a877e473096d4e8a09cccc7049bb21a073acad7db44
 {% block body %}
 
 \t{% if not app.user %}
-\t\t<div>
+\t\t<div style=\"text-align:center\">
 \t\t\t<h1>Vous n'êtes pas connecté</h1>
 \t\t\t<h2>Page visible par tous les utilisateurs</h2>
 \t\t\t<h3>Page d'accueil pour les utilisateurs non connecté</h3>
@@ -154,6 +154,6 @@ class __TwigTemplate_990166d841d7e894a877e473096d4e8a09cccc7049bb21a073acad7db44
 \t{% endif %}
 
 {% endblock %}
-", "projet/index.html.twig", "C:\\Users\\User1\\Documents\\ProjetTest\\templates\\projet\\index.html.twig");
+", "projet/index.html.twig", "C:\\Users\\User1\\Documents\\ProjetPropar\\templates\\projet\\index.html.twig");
     }
 }

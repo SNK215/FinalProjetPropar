@@ -89,50 +89,78 @@ class __TwigTemplate_d1b085f665070049385ae878442d19caf05149a3ebf9a4a0e848a9d5c71
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 9
-        echo "\t<h1 style=\"text-align:center\">Page d'Inscription</h1>
-
-\t";
-        // line 11
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), 'form_start');
-        echo "
-
-\t";
-        // line 13
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), "nom", [], "any", false, false, false, 13), 'row', ["label" => "Nom"]);
-        echo "
-
-\t";
+        echo "\t<h2 style=\"text-align:center\">
+\t\t";
+        // line 10
+        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 10, $this->source); })())) {
+            // line 11
+            echo "\t\t\tModification d'un utilisateur
+\t\t";
+        } else {
+            // line 13
+            echo "\t\t\tCréation d'un nouvel utilisateur
+\t\t";
+        }
         // line 15
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), "prenom", [], "any", false, false, false, 15), 'row', ["label" => "Prénom"]);
+        echo "
+\t</h2>
+\t<div class=\"form\" style=\"width:50%;margin-left:auto;margin-right:auto\">
+\t\t";
+        // line 18
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), 'form_start');
         echo "
 
-\t";
-        // line 17
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), "username", [], "any", false, false, false, 17), 'row', ["label" => "Adresse mail"]);
-        echo "
-\t
-    ";
-        // line 19
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), "password", [], "any", false, false, false, 19), 'row', ["label" => "Mot de passe"]);
+\t\t";
+        // line 20
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), "nom", [], "any", false, false, false, 20), 'row', ["label" => "Nom"]);
         echo "
 
-\t";
-        // line 21
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), "confirm_password", [], "any", false, false, false, 21), 'row', ["label" => "Confirmez le mot de passe"]);
+\t\t";
+        // line 22
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "prenom", [], "any", false, false, false, 22), 'row', ["label" => "Prénom"]);
         echo "
 
-\t";
-        // line 23
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), "roles", [], "any", false, false, false, 23), 'row', ["label" => "Rôle"]);
+\t\t";
+        // line 24
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), "username", [], "any", false, false, false, 24), 'row', ["label" => "Adresse mail"]);
         echo "
 
-\t
+\t\t";
+        // line 26
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 26, $this->source); })()), "password", [], "any", false, false, false, 26), 'row', ["label" => "Mot de passe"]);
+        echo "
 
-\t<button type=\"submit\" class=\"btn btn-success\">Valider</button>
-\t";
+\t\t";
         // line 28
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), 'form_end');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), "confirm_password", [], "any", false, false, false, 28), 'row', ["label" => "Confirmez le mot de passe"]);
         echo "
+
+\t\t";
+        // line 30
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), "roles", [], "any", false, false, false, 30), 'row', ["label" => "Rôle"]);
+        echo "
+
+\t\t</br>
+
+\t\t<button type=\"submit\" class=\"btn btn-success\">
+\t\t\t";
+        // line 35
+        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 35, $this->source); })())) {
+            // line 36
+            echo "\t\t\t\tEnregister les modifications
+\t\t\t";
+        } else {
+            // line 38
+            echo "\t\t\t\tAjouter l'utilisateur
+\t\t\t";
+        }
+        // line 40
+        echo "\t\t</button>
+\t\t";
+        // line 41
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 41, $this->source); })()), 'form_end');
+        echo "
+\t</div>
 
 
 ";
@@ -156,7 +184,7 @@ class __TwigTemplate_d1b085f665070049385ae878442d19caf05149a3ebf9a4a0e848a9d5c71
 
     public function getDebugInfo()
     {
-        return array (  134 => 28,  126 => 23,  121 => 21,  116 => 19,  111 => 17,  106 => 15,  101 => 13,  96 => 11,  92 => 9,  82 => 8,  62 => 3,  51 => 1,  49 => 6,  36 => 1,);
+        return array (  161 => 41,  158 => 40,  154 => 38,  150 => 36,  148 => 35,  140 => 30,  135 => 28,  130 => 26,  125 => 24,  120 => 22,  115 => 20,  110 => 18,  105 => 15,  101 => 13,  97 => 11,  95 => 10,  92 => 9,  82 => 8,  62 => 3,  51 => 1,  49 => 6,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -169,26 +197,40 @@ class __TwigTemplate_d1b085f665070049385ae878442d19caf05149a3ebf9a4a0e848a9d5c71
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {% block body %}
-\t<h1 style=\"text-align:center\">Page d'Inscription</h1>
+\t<h2 style=\"text-align:center\">
+\t\t{% if editMode %}
+\t\t\tModification d'un utilisateur
+\t\t{% else %}
+\t\t\tCréation d'un nouvel utilisateur
+\t\t{% endif  %}
 
-\t{{form_start(form)}}
+\t</h2>
+\t<div class=\"form\" style=\"width:50%;margin-left:auto;margin-right:auto\">
+\t\t{{form_start(form)}}
 
-\t{{form_row(form.nom, {\"label\": \"Nom\"})}}
+\t\t{{form_row(form.nom, {\"label\": \"Nom\"})}}
 
-\t{{form_row(form.prenom, {\"label\": \"Prénom\"})}}
+\t\t{{form_row(form.prenom, {\"label\": \"Prénom\"})}}
 
-\t{{form_row(form.username, {\"label\": \"Adresse mail\"})}}
-\t
-    {{form_row(form.password, {\"label\": \"Mot de passe\"})}}
+\t\t{{form_row(form.username, {\"label\": \"Adresse mail\"})}}
 
-\t{{form_row(form.confirm_password, {\"label\": \"Confirmez le mot de passe\"})}}
+\t\t{{form_row(form.password, {\"label\": \"Mot de passe\"})}}
 
-\t{{form_row(form.roles, {\"label\": \"Rôle\"})}}
+\t\t{{form_row(form.confirm_password, {\"label\": \"Confirmez le mot de passe\"})}}
 
-\t
+\t\t{{form_row(form.roles, {\"label\": \"Rôle\"})}}
 
-\t<button type=\"submit\" class=\"btn btn-success\">Valider</button>
-\t{{form_end(form)}}
+\t\t</br>
+
+\t\t<button type=\"submit\" class=\"btn btn-success\">
+\t\t\t{% if editMode %}
+\t\t\t\tEnregister les modifications
+\t\t\t{% else %}
+\t\t\t\tAjouter l'utilisateur
+\t\t\t{% endif  %}
+\t\t</button>
+\t\t{{form_end(form)}}
+\t</div>
 
 
 {% endblock %}

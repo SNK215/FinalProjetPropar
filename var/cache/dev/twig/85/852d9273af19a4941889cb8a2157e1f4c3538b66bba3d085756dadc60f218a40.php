@@ -96,64 +96,93 @@ class __TwigTemplate_e75334993ab3e757e0d84667993d43c89d39fe4f91c636c6cca4c100bb0
 \t\t\t\t<th scope=\"col\">Nom</th>
 \t\t\t\t<th scope=\"col\">Adresse mail</th>
 \t\t\t\t<th scope=\"col\">Role</th>
+\t\t\t\t<th scope=\"col\">Action</th>
 \t\t\t</tr>
 \t\t</thead>
 \t\t<tbody>
 \t\t\t<tr>
 
 \t\t\t\t";
-        // line 22
+        // line 23
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 22, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 23, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 23
+            // line 24
             echo "
 \t\t\t\t\t<th scope=\"row\">";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 24), "html", null, true);
+            // line 25
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 25), "html", null, true);
             echo "</th>
 \t\t\t\t\t<td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 25), "html", null, true);
-            echo "</td>
-\t\t\t\t\t<td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 26), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nom", [], "any", false, false, false, 26), "html", null, true);
             echo "</td>
 \t\t\t\t\t<td>";
             // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 27), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "prenom", [], "any", false, false, false, 27), "html", null, true);
+            echo "</td>
+\t\t\t\t\t<td>";
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
 \t\t\t\t\t<td>
 \t\t\t\t\t\t";
-            // line 29
-            if (twig_in_filter("ROLE_SUPER_ADMIN", twig_get_attribute($this->env, $this->source, $context["user"], "getroles", [0 => true], "method", false, false, false, 29))) {
-                // line 30
+            // line 30
+            if (twig_in_filter("ROLE_SUPER_ADMIN", twig_get_attribute($this->env, $this->source, $context["user"], "getroles", [0 => true], "method", false, false, false, 30))) {
+                // line 31
                 echo "\t\t\t\t\t\t\t<p>Expert</p>
 \t\t\t\t\t\t";
             }
-            // line 32
+            // line 33
             echo "
 \t\t\t\t\t\t";
-            // line 33
-            if (twig_in_filter("ROLE_ADMIN", twig_get_attribute($this->env, $this->source, $context["user"], "getroles", [0 => true], "method", false, false, false, 33))) {
-                // line 34
+            // line 34
+            if (twig_in_filter("ROLE_ADMIN", twig_get_attribute($this->env, $this->source, $context["user"], "getroles", [0 => true], "method", false, false, false, 34))) {
+                // line 35
                 echo "\t\t\t\t\t\t\t<p>Senior</p>
 \t\t\t\t\t\t";
             }
-            // line 36
+            // line 37
             echo "
 \t\t\t\t\t\t";
-            // line 37
-            if (twig_in_filter("ROLE_USER", twig_get_attribute($this->env, $this->source, $context["user"], "getroles", [0 => true], "method", false, false, false, 37))) {
-                // line 38
+            // line 38
+            if (twig_in_filter("ROLE_USER", twig_get_attribute($this->env, $this->source, $context["user"], "getroles", [0 => true], "method", false, false, false, 38))) {
+                // line 39
                 echo "\t\t\t\t\t\t\t<p>Apprenti</p>
 \t\t\t\t\t\t";
             }
-            // line 40
-            echo "
-\t\t\t\t\t</td>
+            // line 41
+            echo "\t\t\t\t\t</td>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t<div class=\"btn-group\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\tAction
+\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">
+\t\t\t\t\t\t\t\t\t\t<form method=\"post\" action=\"";
+            // line 50
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 50)]), "html", null, true);
+            echo "\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer cet utilisateur  ?');\">
+\t\t\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"_token\" value=\"";
+            // line 51
+            echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 51))), "html", null, true);
+            echo "\">
+\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn\">Supprimer</button>
+\t\t\t\t\t\t\t\t\t\t</form>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Another action</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Something else here</a>
+\t\t\t\t\t\t\t\t</li>
 
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</td>
 \t\t\t\t</tr>
 
 \t\t\t";
@@ -161,7 +190,7 @@ class __TwigTemplate_e75334993ab3e757e0d84667993d43c89d39fe4f91c636c6cca4c100bb0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 46
+        // line 69
         echo "
 
 \t\t</tbody>
@@ -189,7 +218,7 @@ class __TwigTemplate_e75334993ab3e757e0d84667993d43c89d39fe4f91c636c6cca4c100bb0
 
     public function getDebugInfo()
     {
-        return array (  165 => 46,  154 => 40,  150 => 38,  148 => 37,  145 => 36,  141 => 34,  139 => 33,  136 => 32,  132 => 30,  130 => 29,  125 => 27,  121 => 26,  117 => 25,  113 => 24,  110 => 23,  106 => 22,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  194 => 69,  170 => 51,  166 => 50,  155 => 41,  151 => 39,  149 => 38,  146 => 37,  142 => 35,  140 => 34,  137 => 33,  133 => 31,  131 => 30,  126 => 28,  122 => 27,  118 => 26,  114 => 25,  111 => 24,  107 => 23,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -210,6 +239,7 @@ class __TwigTemplate_e75334993ab3e757e0d84667993d43c89d39fe4f91c636c6cca4c100bb0
 \t\t\t\t<th scope=\"col\">Nom</th>
 \t\t\t\t<th scope=\"col\">Adresse mail</th>
 \t\t\t\t<th scope=\"col\">Role</th>
+\t\t\t\t<th scope=\"col\">Action</th>
 \t\t\t</tr>
 \t\t</thead>
 \t\t<tbody>
@@ -233,9 +263,31 @@ class __TwigTemplate_e75334993ab3e757e0d84667993d43c89d39fe4f91c636c6cca4c100bb0
 \t\t\t\t\t\t{% if 'ROLE_USER' in user.getroles(TRUE)  %}
 \t\t\t\t\t\t\t<p>Apprenti</p>
 \t\t\t\t\t\t{% endif %}
-
 \t\t\t\t\t</td>
+\t\t\t\t\t<td>
+\t\t\t\t\t\t<div class=\"btn-group\">
+\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-primary dropdown-toggle\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\tAction
+\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">
+\t\t\t\t\t\t\t\t\t\t<form method=\"post\" action=\"{{ path('app_delete', {'id': user.id}) }}\" onsubmit=\"return confirm('Voulez-vous vraiment supprimer cet utilisateur  ?');\">
+\t\t\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ user.id) }}\">
+\t\t\t\t\t\t\t\t\t\t\t<button class=\"btn\">Supprimer</button>
+\t\t\t\t\t\t\t\t\t\t</form>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Another action</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Something else here</a>
+\t\t\t\t\t\t\t\t</li>
 
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</td>
 \t\t\t\t</tr>
 
 \t\t\t{% endfor %}
