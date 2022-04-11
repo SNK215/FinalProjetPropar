@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -63,6 +65,16 @@ class User implements UserInterface
      * )
      */
     private $nom;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Operation::class, mappedBy="User")
+     */
+    private $operations;
+
+    public function __construct()
+    {
+        $this->operations = new ArrayCollection();
+    }
 
 
     public function getId(): ?int
@@ -176,6 +188,36 @@ class User implements UserInterface
     public function setPrenom($prenom)
     {
         $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Operation>
+     */
+    public function getOperations(): Collection
+    {
+        return $this->operations;
+    }
+
+    public function addOperation(Operation $operation): self
+    {
+        if (!$this->operations->contains($operation)) {
+            $this->operations[] = $operation;
+            $operation->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOperation(Operation $operation): self
+    {
+        if ($this->operations->removeElement($operation)) {
+            // set the owning side to null (unless already changed)
+            if ($operation->getUser() === $this) {
+                $operation->setUser(null);
+            }
+        }
 
         return $this;
     }

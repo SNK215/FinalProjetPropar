@@ -70,20 +70,20 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 
 \t</head>
 \t<body>
-\t\t<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+\t\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
 \t\t\t<div class=\"container-fluid\">
 \t\t\t\t<a class=\"navbar-brand\" href=\"/\">Projet Propar</a>
 \t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
 \t\t\t\t\t<span class=\"navbar-toggler-icon\"></span>
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">
-\t\t\t\t\t<div class=\"navbar-nav\">
+\t\t\t\t\t<div class=\"navbar-nav \">
 
 \t\t\t\t\t\t";
         // line 33
         if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "user", [], "any", false, false, false, 33)) {
             // line 34
-            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/\">Accueil</a>
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link \" href=\"/\">Accueil</a>
 \t\t\t\t\t\t";
         } else {
             // line 36
@@ -105,11 +105,20 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
         }
         // line 44
         echo "
+\t\t\t\t\t\t";
+        // line 45
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 45, $this->source); })()), "user", [], "any", false, false, false, 45)) {
+            // line 46
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/operation/create\">Ajout opération</a>
+\t\t\t\t\t\t";
+        }
+        // line 48
+        echo "
 
 \t\t\t\t\t\t";
-        // line 46
+        // line 50
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
-            // line 47
+            // line 51
             echo "\t\t\t\t\t\t<li class=\"nav-item dropdown\">
 \t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
 \t\t\t\t\t\t\t\tGestion d'utilisateurs
@@ -125,16 +134,16 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         }
-        // line 61
+        // line 65
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
 \t\t";
-        // line 66
+        // line 70
         $this->displayBlock('body', $context, $blocks);
-        // line 67
+        // line 71
         echo "\t</body>
 </html>
 ";
@@ -210,7 +219,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 
     }
 
-    // line 66
+    // line 70
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -240,7 +249,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 
     public function getDebugInfo()
     {
-        return array (  214 => 66,  204 => 17,  202 => 16,  192 => 15,  182 => 13,  180 => 12,  170 => 11,  150 => 6,  138 => 67,  136 => 66,  129 => 61,  113 => 47,  111 => 46,  107 => 44,  103 => 42,  99 => 40,  97 => 39,  94 => 38,  90 => 36,  86 => 34,  84 => 33,  67 => 18,  65 => 15,  62 => 14,  59 => 11,  56 => 8,  54 => 6,  47 => 1,);
+        return array (  223 => 70,  213 => 17,  211 => 16,  201 => 15,  191 => 13,  189 => 12,  179 => 11,  159 => 6,  147 => 71,  145 => 70,  138 => 65,  122 => 51,  120 => 50,  116 => 48,  112 => 46,  110 => 45,  107 => 44,  103 => 42,  99 => 40,  97 => 39,  94 => 38,  90 => 36,  86 => 34,  84 => 33,  67 => 18,  65 => 15,  62 => 14,  59 => 11,  56 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -268,17 +277,17 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 
 \t</head>
 \t<body>
-\t\t<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+\t\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
 \t\t\t<div class=\"container-fluid\">
 \t\t\t\t<a class=\"navbar-brand\" href=\"/\">Projet Propar</a>
 \t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
 \t\t\t\t\t<span class=\"navbar-toggler-icon\"></span>
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">
-\t\t\t\t\t<div class=\"navbar-nav\">
+\t\t\t\t\t<div class=\"navbar-nav \">
 
 \t\t\t\t\t\t{% if not app.user %}
-\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/\">Accueil</a>
+\t\t\t\t\t\t\t<a class=\"nav-link \" href=\"/\">Accueil</a>
 \t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/profile/home\">Accueil</a>
 \t\t\t\t\t\t{% endif %}
@@ -287,6 +296,10 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/login\">Connexion</a>
 \t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/logout\">Déconnexion</a>
+\t\t\t\t\t\t{% endif %}
+
+\t\t\t\t\t\t{% if app.user %}
+\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/operation/create\">Ajout opération</a>
 \t\t\t\t\t\t{% endif %}
 
 

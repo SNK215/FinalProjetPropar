@@ -21,17 +21,17 @@
 
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="/">Projet Propar</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div class="navbar-nav">
+					<div class="navbar-nav ">
 
 						{% if not app.user %}
-							<a class="nav-link" href="/">Accueil</a>
+							<a class="nav-link " href="/">Accueil</a>
 						{% else %}
 							<a class="nav-link" href="/profile/home">Accueil</a>
 						{% endif %}
@@ -40,6 +40,10 @@
 							<a class="nav-link" href="/login">Connexion</a>
 						{% else %}
 							<a class="nav-link" href="/logout">Déconnexion</a>
+						{% endif %}
+
+						{% if app.user %}
+							<a class="nav-link" href="/operation/create">Ajout opération</a>
 						{% endif %}
 
 

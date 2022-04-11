@@ -89,7 +89,7 @@ class __TwigTemplate_2abd8bcc2cf01bdbcacc67df0f2edda3b65d1d322e8fe5c3885de2937fd
         echo "
 
 \t<table class=\"table\">
-\t\t<thead class=\"table-dark\">
+\t\t<thead class=\"table-primary\">
 \t\t\t<tr>
 \t\t\t\t<th scope=\"col\">#</th>
 \t\t\t\t<th scope=\"col\">Nom</th>
@@ -237,7 +237,7 @@ class __TwigTemplate_2abd8bcc2cf01bdbcacc67df0f2edda3b65d1d322e8fe5c3885de2937fd
 
 
 \t<table class=\"table\">
-\t\t<thead class=\"table-dark\">
+\t\t<thead class=\"table-primary\">
 \t\t\t<tr>
 \t\t\t\t<th scope=\"col\">#</th>
 \t\t\t\t<th scope=\"col\">Nom</th>

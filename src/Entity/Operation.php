@@ -42,6 +42,11 @@ class Operation
      */
     private $adresse;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="operations")
+     */
+    private $User;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -103,6 +108,18 @@ class Operation
     public function setAdresse(string $adresse): self
     {
         $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->User;
+    }
+
+    public function setUser(?User $User): self
+    {
+        $this->User = $User;
 
         return $this;
     }

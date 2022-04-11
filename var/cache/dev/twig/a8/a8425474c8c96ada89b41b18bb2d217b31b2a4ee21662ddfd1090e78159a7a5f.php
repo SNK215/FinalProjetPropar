@@ -85,7 +85,7 @@ class __TwigTemplate_6f977d70cd7d38cf5d1b0741c47054e615cd4cae12aaba2810cec4d0d43
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<form method=\"post\">
+        echo "<form method=\"post\" style=\"width:50%;margin-left:auto;margin-right:auto\">
     ";
         // line 7
         if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 7, $this->source); })())) {
@@ -167,7 +167,7 @@ class __TwigTemplate_6f977d70cd7d38cf5d1b0741c47054e615cd4cae12aaba2810cec4d0d43
 {% block title %}Connexion{% endblock %}
 
 {% block body %}
-<form method=\"post\">
+<form method=\"post\" style=\"width:50%;margin-left:auto;margin-right:auto\">
     {% if error %}
         <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
