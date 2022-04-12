@@ -7,26 +7,29 @@
 
 	<h1 style="text-align:center">Bienvenue sur votre tableau de bord</h1>
 
-	<h1 style="; margin-bottom: 0px; text-align: center; ">Opérations en cours</h1>
-	<div style="display: flex; flex-wrap: wrap;">
+	<h2 style="margin-bottom: 0px; text-align: center;margin-top:20px;">Opérations en cours</h2>
+	<div style="display: flex; flex-wrap: wrap;justify-content:center ">
 		{% for Operation in Operations %}
 			{% if app.user == Operation.User %}
-				<div style="margin-left: 30px; margin-right: 100px; margin-bottom: 30px; margin-top: 20px;">
+				<div style="margin-left: 30px; margin-right: 100px; margin-bottom: 30px; margin-top: 30px;">
 					<div class={% if Operation.type == "Grosse" %} "card text-white bg-danger mb-3" {% endif %} {% if Operation.type == "Moyenne" %} "card text-white bg-warning mb-3" {% endif %} {% if Operation.type == "Petite" %} "card text-white bg-info mb-3" {% endif %} style="max-width: 18rem;">
 
 						<div class="card-body">
-							<h5 class="card-title">{{ Operation.type }}
-								opération</h5>
-							<p class="card-text">{{ Operation.description }}</p>
-							<p class="card-text">{{ Operation.nom }}
-								{{ Operation.prenom }}</p>
-							<p class="card-text">{{ Operation.adresse }}</p>
-							<a href="#" class="btn btn-primary">Terminer</a>
+							<h5 class="card-title">
+								{% if Operation.type == "Moyenne" %}Opération moyenne
+								{% else %}
+									{{ Operation.type }}
+									opération{% endif%}</h5>
+								<p class="card-text">{{ Operation.description }}</p>
+								<p class="card-text">{{ Operation.nom }}
+									{{ Operation.prenom }}</p>
+								<p class="card-text">{{ Operation.adresse }}</p>
+								<a href="#" class="btn btn-primary">Terminer</a>
+							</div>
 						</div>
 					</div>
-				</div>
-			{% endif %}
-		{% endfor %}
-	</div>
+				{% endif %}
+			{% endfor %}
+		</div>
 
-{% endblock %}
+	{% endblock %}

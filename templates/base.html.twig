@@ -7,7 +7,7 @@
 			{% endblock %}
 		</title>
 		{# Run `composer require symfony/webpack-encore-bundle`
-						           and uncomment the following Encore helpers to start using Symfony UX #}
+								           and uncomment the following Encore helpers to start using Symfony UX #}
 		{% block stylesheets %}
 			{#{{ encore_entry_link_tags('app') }}#}
 		{% endblock %}
@@ -29,18 +29,15 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav ">
-
-						{% if not app.user %}
-							<a class="nav-link " href="/">Accueil</a>
-						{% else %}
-							<a class="nav-link" href="/profile/home">Accueil</a>
-						{% endif %}
-
 						{% if not app.user %}
 							<a class="nav-link" href="/login">Connexion</a>
 						{% else %}
 							<a class="nav-link" href="/logout">Déconnexion</a>
 						{% endif %}
+						{% if app.user %}
+							<a class="nav-link" href="/profile/home">Mes opérations</a>
+						{% endif %}
+
 
 						{% if app.user %}
 							<a class="nav-link" href="/operation/create">Ajout opération</a>
@@ -48,19 +45,19 @@
 
 
 						{% if is_granted("ROLE_SUPER_ADMIN") %}
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Gestion d'utilisateurs
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<li>
-									<a class="dropdown-item" href="/superadmin/show">Voir les utilisateurs</a>
-								</li>
-								<li>
-									<a class="dropdown-item" href="/superadmin/registration">Nouvel utilisateur</a>
-								</li>
-							</ul>
-						</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Gestion d'utilisateurs
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<li>
+										<a class="dropdown-item" href="/superadmin/show">Voir les utilisateurs</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="/superadmin/registration">Nouvel utilisateur</a>
+									</li>
+								</ul>
+							</li>
 						{% endif %}
 
 					</div>

@@ -78,72 +78,66 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">
 \t\t\t\t\t<div class=\"navbar-nav \">
-
 \t\t\t\t\t\t";
-        // line 33
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "user", [], "any", false, false, false, 33)) {
-            // line 34
-            echo "\t\t\t\t\t\t\t<a class=\"nav-link \" href=\"/\">Accueil</a>
-\t\t\t\t\t\t";
-        } else {
-            // line 36
-            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/profile/home\">Accueil</a>
-\t\t\t\t\t\t";
-        }
-        // line 38
-        echo "
-\t\t\t\t\t\t";
-        // line 39
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "user", [], "any", false, false, false, 39)) {
-            // line 40
+        // line 32
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 32, $this->source); })()), "user", [], "any", false, false, false, 32)) {
+            // line 33
             echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/login\">Connexion</a>
 \t\t\t\t\t\t";
         } else {
-            // line 42
+            // line 35
             echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/logout\">Déconnexion</a>
 \t\t\t\t\t\t";
         }
-        // line 44
-        echo "
-\t\t\t\t\t\t";
-        // line 45
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 45, $this->source); })()), "user", [], "any", false, false, false, 45)) {
-            // line 46
-            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/operation/create\">Ajout opération</a>
+        // line 37
+        echo "\t\t\t\t\t\t";
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 37, $this->source); })()), "user", [], "any", false, false, false, 37)) {
+            // line 38
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/profile/home\">Mes opérations</a>
 \t\t\t\t\t\t";
         }
-        // line 48
+        // line 40
         echo "
 
 \t\t\t\t\t\t";
-        // line 50
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
-            // line 51
-            echo "\t\t\t\t\t\t<li class=\"nav-item dropdown\">
-\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
-\t\t\t\t\t\t\t\tGestion d'utilisateurs
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/show\">Voir les utilisateurs</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/registration\">Nouvel utilisateur</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</li>
+        // line 42
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 42, $this->source); })()), "user", [], "any", false, false, false, 42)) {
+            // line 43
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/operation/create\">Ajout opération</a>
 \t\t\t\t\t\t";
         }
-        // line 65
+        // line 45
+        echo "
+
+\t\t\t\t\t\t";
+        // line 47
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
+            // line 48
+            echo "\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t\tGestion d'utilisateurs
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/show\">Voir les utilisateurs</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/registration\">Nouvel utilisateur</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t";
+        }
+        // line 62
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
 \t\t";
-        // line 70
+        // line 67
         $this->displayBlock('body', $context, $blocks);
-        // line 71
+        // line 68
         echo "\t</body>
 </html>
 ";
@@ -219,7 +213,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 
     }
 
-    // line 70
+    // line 67
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -249,7 +243,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 
     public function getDebugInfo()
     {
-        return array (  223 => 70,  213 => 17,  211 => 16,  201 => 15,  191 => 13,  189 => 12,  179 => 11,  159 => 6,  147 => 71,  145 => 70,  138 => 65,  122 => 51,  120 => 50,  116 => 48,  112 => 46,  110 => 45,  107 => 44,  103 => 42,  99 => 40,  97 => 39,  94 => 38,  90 => 36,  86 => 34,  84 => 33,  67 => 18,  65 => 15,  62 => 14,  59 => 11,  56 => 8,  54 => 6,  47 => 1,);
+        return array (  217 => 67,  207 => 17,  205 => 16,  195 => 15,  185 => 13,  183 => 12,  173 => 11,  153 => 6,  141 => 68,  139 => 67,  132 => 62,  116 => 48,  114 => 47,  110 => 45,  106 => 43,  104 => 42,  100 => 40,  96 => 38,  93 => 37,  89 => 35,  85 => 33,  83 => 32,  67 => 18,  65 => 15,  62 => 14,  59 => 11,  56 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -263,7 +257,7 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t\t{% endblock %}
 \t\t</title>
 \t\t{# Run `composer require symfony/webpack-encore-bundle`
-\t\t\t\t\t\t           and uncomment the following Encore helpers to start using Symfony UX #}
+\t\t\t\t\t\t\t\t           and uncomment the following Encore helpers to start using Symfony UX #}
 \t\t{% block stylesheets %}
 \t\t\t{#{{ encore_entry_link_tags('app') }}#}
 \t\t{% endblock %}
@@ -285,18 +279,15 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">
 \t\t\t\t\t<div class=\"navbar-nav \">
-
-\t\t\t\t\t\t{% if not app.user %}
-\t\t\t\t\t\t\t<a class=\"nav-link \" href=\"/\">Accueil</a>
-\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/profile/home\">Accueil</a>
-\t\t\t\t\t\t{% endif %}
-
 \t\t\t\t\t\t{% if not app.user %}
 \t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/login\">Connexion</a>
 \t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/logout\">Déconnexion</a>
 \t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t{% if app.user %}
+\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/profile/home\">Mes opérations</a>
+\t\t\t\t\t\t{% endif %}
+
 
 \t\t\t\t\t\t{% if app.user %}
 \t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/operation/create\">Ajout opération</a>
@@ -304,19 +295,19 @@ class __TwigTemplate_19cd67cd428cc804ef4aed49b45dce0e721740eeb49ec5b85b12da52156
 
 
 \t\t\t\t\t\t{% if is_granted(\"ROLE_SUPER_ADMIN\") %}
-\t\t\t\t\t\t<li class=\"nav-item dropdown\">
-\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
-\t\t\t\t\t\t\t\tGestion d'utilisateurs
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/show\">Voir les utilisateurs</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/registration\">Nouvel utilisateur</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
+\t\t\t\t\t\t\t\t\tGestion d'utilisateurs
+\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/show\">Voir les utilisateurs</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"/superadmin/registration\">Nouvel utilisateur</a>
+\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t{% endif %}
 
 \t\t\t\t\t</div>
