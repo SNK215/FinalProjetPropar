@@ -45,9 +45,6 @@ class __TwigTemplate_d1b085f665070049385ae878442d19caf05149a3ebf9a4a0e848a9d5c71
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "security/registration.html.twig"));
 
-        // line 6
-        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 6, $this->source); })()), [0 => "bootstrap_4_layout.html.twig"], true);
-        // line 1
         $this->parent = $this->loadTemplate("base.html.twig", "security/registration.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -58,7 +55,7 @@ class __TwigTemplate_d1b085f665070049385ae878442d19caf05149a3ebf9a4a0e848a9d5c71
 
     }
 
-    // line 3
+    // line 2
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -68,7 +65,7 @@ class __TwigTemplate_d1b085f665070049385ae878442d19caf05149a3ebf9a4a0e848a9d5c71
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Inscription
+        echo "Index
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -78,7 +75,7 @@ class __TwigTemplate_d1b085f665070049385ae878442d19caf05149a3ebf9a4a0e848a9d5c71
 
     }
 
-    // line 8
+    // line 4
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -88,82 +85,232 @@ class __TwigTemplate_d1b085f665070049385ae878442d19caf05149a3ebf9a4a0e848a9d5c71
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 9
-        echo "\t<h2 style=\"text-align:center\">
+        // line 5
+        echo " <link href=\"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700\" rel=\"stylesheet\">
+    <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.4.1/css/all.css\" integrity=\"sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz\" crossorigin=\"anonymous\">
+\t<style>
+\t\thtml,
+\t\tbody {
+\t\t\tmin-height: 100%;
+\t\t}
+\t\tbody,
+\t\tdiv,
+\t\tform,
+\t\tinput,
+\t\tselect,
+\t\tp {
+\t\t\tpadding: 0;
+\t\t\tmargin: 0;
+\t\t\toutline: none;
+\t\t\tfont-family: Roboto, Arial, sans-serif;
+\t\t\tfont-size: 16px;
+\t\t\tcolor: #eee;
+\t\t}
+\t\tbody {
+\t\t\tbackground: url(\"https://www.hellomagazine.com/imagenes/homes/2019010866329/12-month-cleaning-calendar/0-312-637/cleaning-products-t.jpg\") no-repeat center;
+\t\t\tbackground-size: cover;
+\t\t}
+\t\th1,
+\t\th2 {
+\t\t\ttext-transform: uppercase;
+\t\t\tfont-weight: 400;
+\t\t}
+\t\th2 {
+\t\t\tmargin: 0 0 0 8px;
+\t\t}
+\t\t.main-block {
+\t\t\tdisplay: flex;
+\t\t\tflex-direction: column;
+\t\t\tjustify-content: center;
+\t\t\talign-items: center;
+\t\t\theight: 100%;
+\t\t\tpadding: 25px;
+\t\t\tbackground: rgba(0, 0, 0, 0.5);
+\t\t}
+\t\t.left-part,
+\t\tform {
+\t\t\tpadding: 25px;
+\t\t}
+\t\t.left-part {
+\t\t\ttext-align: center;
+\t\t}
+\t\t.fa-graduation-cap {
+\t\t\tfont-size: 72px;
+\t\t}
+\t\tform {
+\t\t\tbackground: rgba(0, 0, 0, 0.4);
+\t\t}
+\t\t.title {
+\t\t\tdisplay: flex;
+\t\t\talign-items: center;
+\t\t\tmargin-bottom: 20px;
+\t\t}
+\t\t.info {
+\t\t\tdisplay: flex;
+\t\t\tflex-direction: column;
+\t\t}
+\t\tinput,
+\t\tselect {
+\t\t\tpadding: 5px;
+\t\t\tmargin-bottom: 30px;
+\t\t\tbackground: transparent;
+\t\t\tborder: none;
+\t\t\tborder-bottom: 1px solid #eee;
+\t\t}
+\t\tinput::placeholder {
+\t\t\tcolor: #eee;
+\t\t}
+\t\toption:focus {
+\t\t\tborder: none;
+\t\t}
+\t\toption {
+\t\t\tbackground: black;
+\t\t\tborder: none;
+\t\t}
+\t\t.checkbox input {
+\t\t\tmargin: 0 10px 0 0;
+\t\t\tvertical-align: middle;
+\t\t}
+\t\t.checkbox a {
+\t\t\tcolor: #26A9E0;
+\t\t}
+\t\t.checkbox a:hover {
+\t\t\tcolor: #85D6DE;
+\t\t}
+\t\t.btn-item,
+\t\tbutton {
+\t\t\tpadding: 10px 5px;
+\t\t\tmargin-top: 20px;
+\t\t\tborder-radius: 5px;
+\t\t\tborder: none;
+\t\t\tbackground: #26A9E0;
+\t\t\ttext-decoration: none;
+\t\t\tfont-size: 15px;
+\t\t\tfont-weight: 400;
+\t\t\tcolor: #fff;
+\t\t}
+\t\t.btn-item {
+\t\t\tdisplay: inline-block;
+\t\t\tmargin: 20px 5px 0;
+\t\t}
+\t\tbutton {
+\t\t\twidth: 100%;
+\t\t}
+\t\tbutton:hover,
+\t\t.btn-item:hover {
+\t\t\tbackground: #85D6DE;
+\t\t}
+\t\t@media(min-width: 568px) {
+\t\t\thtml,
+\t\t\tbody {
+\t\t\t\theight: 100%;
+\t\t\t}
+\t\t\t.main-block {
+\t\t\t\tflex-direction: row;
+\t\t\t\theight: calc(100% - 50px);
+\t\t\t}
+\t\t\t.left-part,
+\t\t\tform {
+\t\t\t\tflex: 1;
+\t\t\t\theight: auto;
+\t\t\t}
+\t\t}
+\t</style>
+</head>
+<body>
+\t<div class=\"main-block\">
+\t\t<div class=\"left-part\">
+\t\t\t<h2>Projet Propar</h2>
+\t\t\t<div class=\"btn-group\"></div>
+\t\t</div>
 \t\t";
-        // line 10
-        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 10, $this->source); })())) {
-            // line 11
-            echo "\t\t\tModification d'un utilisateur
-\t\t";
+        // line 142
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 142, $this->source); })()), 'form_start');
+        echo "
+\t\t\t<div class=\"title\">
+\t\t\t\t<i class=\"fas fa-pencil-alt\"></i>
+\t\t\t\t<h3>
+\t\t\t\t\t";
+        // line 146
+        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 146, $this->source); })())) {
+            // line 147
+            echo "\t\t\t\t\t\tModification d'un utilisateur
+\t\t\t\t\t";
         } else {
-            // line 13
-            echo "\t\t\tCréation d'un nouvel utilisateur
-\t\t";
+            // line 149
+            echo "\t\t\t\t\t\tNouvel utilisateur
+\t\t\t\t\t";
         }
-        // line 15
-        echo "
-\t</h2>
-\t<div class=\"form\" style=\"width:50%;margin-left:auto;margin-right:auto\">
-\t\t";
-        // line 18
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), 'form_start');
-        echo "
+        // line 151
+        echo "\t\t\t\t</h3>
+\t\t\t</div>
+\t\t\t<div class=\"info\">
 
-\t\t";
-        // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 20, $this->source); })()), "nom", [], "any", false, false, false, 20), 'row', ["label" => "Nom"]);
+\t\t\t\t
+\t\t\t\t";
+        // line 156
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 156, $this->source); })()), "nom", [], "any", false, false, false, 156), 'help');
         echo "
-
-\t\t";
-        // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), "prenom", [], "any", false, false, false, 22), 'row', ["label" => "Prénom"]);
+\t\t\t\t";
+        // line 157
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 157, $this->source); })()), "nom", [], "any", false, false, false, 157), 'widget', ["attr" => ["placeholder" => "Nom", "style" => "width: 100%"], "label" => " "]);
         echo "
 
-\t\t";
-        // line 24
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), "username", [], "any", false, false, false, 24), 'row', ["label" => "Adresse mail"]);
+\t\t\t\t";
+        // line 159
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 159, $this->source); })()), "prenom", [], "any", false, false, false, 159), 'help');
+        echo "
+\t\t\t\t";
+        // line 160
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 160, $this->source); })()), "prenom", [], "any", false, false, false, 160), 'widget', ["attr" => ["placeholder" => "Prénom", "style" => "width: 100%"], "label" => " "]);
+        echo "
+\t\t\t\t";
+        // line 161
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 161, $this->source); })()), "username", [], "any", false, false, false, 161), 'help');
+        echo "
+\t\t\t\t";
+        // line 162
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 162, $this->source); })()), "username", [], "any", false, false, false, 162), 'widget', ["attr" => ["placeholder" => "Email", "style" => "width: 100%"], "label" => " "]);
         echo "
 
-\t\t";
-        // line 26
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 26, $this->source); })()), "password", [], "any", false, false, false, 26), 'row', ["label" => "Mot de passe"]);
+\t\t\t\t";
+        // line 164
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 164, $this->source); })()), "password", [], "any", false, false, false, 164), 'row', ["attr" => ["placeholder" => "Mot de passe", "style" => "width: 100%"], "label" => " "]);
         echo "
 
-\t\t";
-        // line 28
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), "confirm_password", [], "any", false, false, false, 28), 'row', ["label" => "Confirmez le mot de passe"]);
+\t\t\t\t";
+        // line 166
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 166, $this->source); })()), "confirm_password", [], "any", false, false, false, 166), 'row', ["attr" => ["placeholder" => "Confirmez mot de passe", "style" => "width: 100%"], "label" => " "]);
         echo "
 
-\t\t";
-        // line 30
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), "roles", [], "any", false, false, false, 30), 'row', ["label" => "Rôle"]);
+\t\t\t\t";
+        // line 168
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 168, $this->source); })()), "roles", [], "any", false, false, false, 168), 'row', ["label" => " "]);
         echo "
 
-\t\t</br>
+\t\t\t</br>
 
-\t\t<button type=\"submit\" class=\"btn btn-success\">
-\t\t\t";
-        // line 35
-        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 35, $this->source); })())) {
-            // line 36
-            echo "\t\t\t\tEnregister les modifications
-\t\t\t";
+\t\t\t<button type=\"submit\" class=\"btn btn-outline-success\">
+\t\t\t\t";
+        // line 173
+        if ((isset($context["editMode"]) || array_key_exists("editMode", $context) ? $context["editMode"] : (function () { throw new RuntimeError('Variable "editMode" does not exist.', 173, $this->source); })())) {
+            // line 174
+            echo "\t\t\t\t\tEnregister les modifications
+\t\t\t\t";
         } else {
-            // line 38
-            echo "\t\t\t\tAjouter l'utilisateur
-\t\t\t";
+            // line 176
+            echo "\t\t\t\t\tAjouter l'utilisateur
+\t\t\t\t";
         }
-        // line 40
-        echo "\t\t</button>
-\t\t";
-        // line 41
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 41, $this->source); })()), 'form_end');
+        // line 178
+        echo "\t\t\t</button>
+\t\t\t
+\t\t</div>
+\t";
+        // line 181
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 181, $this->source); })()), 'form_end');
         echo "
-\t</div>
-
-
-";
+</body></div></body></html>";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -184,56 +331,193 @@ class __TwigTemplate_d1b085f665070049385ae878442d19caf05149a3ebf9a4a0e848a9d5c71
 
     public function getDebugInfo()
     {
-        return array (  161 => 41,  158 => 40,  154 => 38,  150 => 36,  148 => 35,  140 => 30,  135 => 28,  130 => 26,  125 => 24,  120 => 22,  115 => 20,  110 => 18,  105 => 15,  101 => 13,  97 => 11,  95 => 10,  92 => 9,  82 => 8,  62 => 3,  51 => 1,  49 => 6,  36 => 1,);
+        return array (  311 => 181,  306 => 178,  302 => 176,  298 => 174,  296 => 173,  288 => 168,  283 => 166,  278 => 164,  273 => 162,  269 => 161,  265 => 160,  261 => 159,  256 => 157,  252 => 156,  245 => 151,  241 => 149,  237 => 147,  235 => 146,  228 => 142,  89 => 5,  79 => 4,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends \"base.html.twig\" %}
-
-{% block title %}Inscription
+        return new Source("{% extends 'base.html.twig' %}
+{% block title %}Index
 {% endblock %}
-
-{% form_theme form 'bootstrap_4_layout.html.twig' %}
-
 {% block body %}
-\t<h2 style=\"text-align:center\">
-\t\t{% if editMode %}
-\t\t\tModification d'un utilisateur
-\t\t{% else %}
-\t\t\tCréation d'un nouvel utilisateur
-\t\t{% endif  %}
-
-\t</h2>
-\t<div class=\"form\" style=\"width:50%;margin-left:auto;margin-right:auto\">
+ <link href=\"https://fonts.googleapis.com/css?family=Roboto:300,400,500,700\" rel=\"stylesheet\">
+    <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.4.1/css/all.css\" integrity=\"sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz\" crossorigin=\"anonymous\">
+\t<style>
+\t\thtml,
+\t\tbody {
+\t\t\tmin-height: 100%;
+\t\t}
+\t\tbody,
+\t\tdiv,
+\t\tform,
+\t\tinput,
+\t\tselect,
+\t\tp {
+\t\t\tpadding: 0;
+\t\t\tmargin: 0;
+\t\t\toutline: none;
+\t\t\tfont-family: Roboto, Arial, sans-serif;
+\t\t\tfont-size: 16px;
+\t\t\tcolor: #eee;
+\t\t}
+\t\tbody {
+\t\t\tbackground: url(\"https://www.hellomagazine.com/imagenes/homes/2019010866329/12-month-cleaning-calendar/0-312-637/cleaning-products-t.jpg\") no-repeat center;
+\t\t\tbackground-size: cover;
+\t\t}
+\t\th1,
+\t\th2 {
+\t\t\ttext-transform: uppercase;
+\t\t\tfont-weight: 400;
+\t\t}
+\t\th2 {
+\t\t\tmargin: 0 0 0 8px;
+\t\t}
+\t\t.main-block {
+\t\t\tdisplay: flex;
+\t\t\tflex-direction: column;
+\t\t\tjustify-content: center;
+\t\t\talign-items: center;
+\t\t\theight: 100%;
+\t\t\tpadding: 25px;
+\t\t\tbackground: rgba(0, 0, 0, 0.5);
+\t\t}
+\t\t.left-part,
+\t\tform {
+\t\t\tpadding: 25px;
+\t\t}
+\t\t.left-part {
+\t\t\ttext-align: center;
+\t\t}
+\t\t.fa-graduation-cap {
+\t\t\tfont-size: 72px;
+\t\t}
+\t\tform {
+\t\t\tbackground: rgba(0, 0, 0, 0.4);
+\t\t}
+\t\t.title {
+\t\t\tdisplay: flex;
+\t\t\talign-items: center;
+\t\t\tmargin-bottom: 20px;
+\t\t}
+\t\t.info {
+\t\t\tdisplay: flex;
+\t\t\tflex-direction: column;
+\t\t}
+\t\tinput,
+\t\tselect {
+\t\t\tpadding: 5px;
+\t\t\tmargin-bottom: 30px;
+\t\t\tbackground: transparent;
+\t\t\tborder: none;
+\t\t\tborder-bottom: 1px solid #eee;
+\t\t}
+\t\tinput::placeholder {
+\t\t\tcolor: #eee;
+\t\t}
+\t\toption:focus {
+\t\t\tborder: none;
+\t\t}
+\t\toption {
+\t\t\tbackground: black;
+\t\t\tborder: none;
+\t\t}
+\t\t.checkbox input {
+\t\t\tmargin: 0 10px 0 0;
+\t\t\tvertical-align: middle;
+\t\t}
+\t\t.checkbox a {
+\t\t\tcolor: #26A9E0;
+\t\t}
+\t\t.checkbox a:hover {
+\t\t\tcolor: #85D6DE;
+\t\t}
+\t\t.btn-item,
+\t\tbutton {
+\t\t\tpadding: 10px 5px;
+\t\t\tmargin-top: 20px;
+\t\t\tborder-radius: 5px;
+\t\t\tborder: none;
+\t\t\tbackground: #26A9E0;
+\t\t\ttext-decoration: none;
+\t\t\tfont-size: 15px;
+\t\t\tfont-weight: 400;
+\t\t\tcolor: #fff;
+\t\t}
+\t\t.btn-item {
+\t\t\tdisplay: inline-block;
+\t\t\tmargin: 20px 5px 0;
+\t\t}
+\t\tbutton {
+\t\t\twidth: 100%;
+\t\t}
+\t\tbutton:hover,
+\t\t.btn-item:hover {
+\t\t\tbackground: #85D6DE;
+\t\t}
+\t\t@media(min-width: 568px) {
+\t\t\thtml,
+\t\t\tbody {
+\t\t\t\theight: 100%;
+\t\t\t}
+\t\t\t.main-block {
+\t\t\t\tflex-direction: row;
+\t\t\t\theight: calc(100% - 50px);
+\t\t\t}
+\t\t\t.left-part,
+\t\t\tform {
+\t\t\t\tflex: 1;
+\t\t\t\theight: auto;
+\t\t\t}
+\t\t}
+\t</style>
+</head>
+<body>
+\t<div class=\"main-block\">
+\t\t<div class=\"left-part\">
+\t\t\t<h2>Projet Propar</h2>
+\t\t\t<div class=\"btn-group\"></div>
+\t\t</div>
 \t\t{{form_start(form)}}
+\t\t\t<div class=\"title\">
+\t\t\t\t<i class=\"fas fa-pencil-alt\"></i>
+\t\t\t\t<h3>
+\t\t\t\t\t{% if editMode %}
+\t\t\t\t\t\tModification d'un utilisateur
+\t\t\t\t\t{% else %}
+\t\t\t\t\t\tNouvel utilisateur
+\t\t\t\t\t{% endif  %}
+\t\t\t\t</h3>
+\t\t\t</div>
+\t\t\t<div class=\"info\">
 
-\t\t{{form_row(form.nom, {\"label\": \"Nom\"})}}
+\t\t\t\t
+\t\t\t\t{{ form_help(form.nom) }}
+\t\t\t\t{{form_widget(form.nom, {'attr': {'placeholder': 'Nom','style' : 'width: 100%'}, \"label\":\" \"})}}
 
-\t\t{{form_row(form.prenom, {\"label\": \"Prénom\"})}}
+\t\t\t\t{{ form_help(form.prenom) }}
+\t\t\t\t{{form_widget(form.prenom, {'attr': {'placeholder': 'Prénom','style' : 'width: 100%'}, \"label\":\" \"})}}
+\t\t\t\t{{ form_help(form.username) }}
+\t\t\t\t{{form_widget(form.username, {'attr': {'placeholder': 'Email','style' : 'width: 100%'}, \"label\":\" \"})}}
 
-\t\t{{form_row(form.username, {\"label\": \"Adresse mail\"})}}
+\t\t\t\t{{form_row(form.password, {'attr': {'placeholder': 'Mot de passe','style' : 'width: 100%'}, \"label\":\" \"})}}
 
-\t\t{{form_row(form.password, {\"label\": \"Mot de passe\"})}}
+\t\t\t\t{{form_row(form.confirm_password, {'attr': {'placeholder': 'Confirmez mot de passe','style' : 'width: 100%'}, \"label\":\" \"})}}
 
-\t\t{{form_row(form.confirm_password, {\"label\": \"Confirmez le mot de passe\"})}}
+\t\t\t\t{{form_row(form.roles, {\"label\": \" \"})}}
 
-\t\t{{form_row(form.roles, {\"label\": \"Rôle\"})}}
+\t\t\t</br>
 
-\t\t</br>
-
-\t\t<button type=\"submit\" class=\"btn btn-success\">
-\t\t\t{% if editMode %}
-\t\t\t\tEnregister les modifications
-\t\t\t{% else %}
-\t\t\t\tAjouter l'utilisateur
-\t\t\t{% endif  %}
-\t\t</button>
-\t\t{{form_end(form)}}
-\t</div>
-
-
-{% endblock %}
+\t\t\t<button type=\"submit\" class=\"btn btn-outline-success\">
+\t\t\t\t{% if editMode %}
+\t\t\t\t\tEnregister les modifications
+\t\t\t\t{% else %}
+\t\t\t\t\tAjouter l'utilisateur
+\t\t\t\t{% endif  %}
+\t\t\t</button>
+\t\t\t
+\t\t</div>
+\t{{form_end(form)}}
+</body></div></body></html>{% endblock %}
 ", "security/registration.html.twig", "C:\\Users\\User1\\Documents\\ProjetPropar\\templates\\security\\registration.html.twig");
     }
 }

@@ -43,6 +43,7 @@ return [
                     .'|delete/([^/]++)(*:199)'
                     .'|([^/]++)/edit(*:220)'
                 .')'
+                .'|/operation/Terminer/([^/]++)(*:257)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -54,8 +55,9 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         199 => [[['_route' => 'app_delete', '_controller' => 'App\\Controller\\ProjetController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        220 => [
-            [['_route' => 'app_edit_user', '_controller' => 'App\\Controller\\SecurityController::registration'], ['id'], null, null, false, false, null],
+        220 => [[['_route' => 'app_edit_user', '_controller' => 'App\\Controller\\SecurityController::registration'], ['id'], null, null, false, false, null]],
+        257 => [
+            [['_route' => 'terminer_operation', '_controller' => 'App\\Controller\\ProjetController::terminer'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

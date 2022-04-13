@@ -19,10 +19,14 @@ class ProjetController extends AbstractController
     /**
      * @Route("/", name="app_index")
      */
-    public function index(): Response
+    public function index(UserRepository $repoUser, OperationRepository $repoOp): Response
     {
+        $users = $repoUser->findAll();
+        $operations = $repoOp->findAll();
         return $this->render('projet/index.html.twig', [
             'controller_name' => 'ProjetController',
+            "users" => $users,
+            "operations" => $operations
         ]);
     }
 
@@ -54,20 +58,22 @@ class ProjetController extends AbstractController
      /**
      * @Route("/operation/create", name="app_createOp")
      */
-    public function CreateOp(Request $request, EntityManagerInterface $manager)
+    public function CreateOp(Request $request, EntityManagerInterface $manager,UserRepository $repo)
     {
         $Operation = new Operation;
-        $form = $this->createForm(OperationType::class,$Operation);
+        $form = $this->createForm(OperationType::class, $Operation);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $user = $repo->find($this->getUser());
+            $Operation->setArchiver(true);
             $Operation->setUser($this->getUser());
-            $manager->persist($Operation);
+            $user->setNbOperationEnCour(($user->getNbOperationEnCour()+1));
+            $manager->persist($Operation,$user);
             $manager->flush();
             return $this->redirectToRoute("app_home");
         }
         return $this->render('projet/CreateOp.html.twig', [
             'form' => $form->createView()
-            
         ]);
     }
 
@@ -83,6 +89,18 @@ class ProjetController extends AbstractController
             'id' => $this->getUser()
         ]);
     }
+
+    /**
+     * @Route("/operation/Terminer/{id}",  name="terminer_operation")
+     */
+    public function terminer(Operation $op, EntityManagerInterface $manager,UserRepository $repo): Response {
+        $user = $repo->find($this->getUser());
+        $user->setNbOperationEnCour(($user->getNbOperationEnCour()-1));
+        $op->setArchiver(false);
+        $manager->persist($op);
+        $manager->flush();
+        return $this->redirectToRoute('app_home');
+}
     
 }
 

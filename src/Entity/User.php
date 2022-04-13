@@ -71,6 +71,16 @@ class User implements UserInterface
      */
     private $operations;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $NbOperationAutoriser;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $NbOperationEnCour;
+
     public function __construct()
     {
         $this->operations = new ArrayCollection();
@@ -218,6 +228,30 @@ class User implements UserInterface
                 $operation->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getNbOperationAutoriser(): ?int
+    {
+        return $this->NbOperationAutoriser;
+    }
+
+    public function setNbOperationAutoriser(?int $NbOperationAutoriser): self
+    {
+        $this->NbOperationAutoriser = $NbOperationAutoriser;
+
+        return $this;
+    }
+
+    public function getNbOperationEnCour(): ?int
+    {
+        return $this->NbOperationEnCour;
+    }
+
+    public function setNbOperationEnCour(?int $NbOperationEnCour): self
+    {
+        $this->NbOperationEnCour = $NbOperationEnCour;
 
         return $this;
     }

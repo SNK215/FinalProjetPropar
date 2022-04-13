@@ -33,6 +33,14 @@ class SecurityController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $hash = $encoder->encodePassword($user,$user->getPassword());
+            if ($user->getRoles() == ["ROLE_USER"] ) {
+                $user->setNbOperationAutoriser(1);
+            }elseif ($user->getRoles() == ["ROLE_ADMIN"]) {
+                $user->setNbOperationAutoriser(3);
+            }elseif ($user->getRoles() == ["ROLE_SUPER_ADMIN"]) {
+                $user->setNbOperationAutoriser(5);
+            }
+            $user->setNbOperationEnCour(0);
             $user->setPassword($hash);
             $manager->persist($user);
             $manager->flush();

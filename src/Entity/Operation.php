@@ -47,6 +47,11 @@ class Operation
      */
     private $User;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $Archiver;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +125,18 @@ class Operation
     public function setUser(?User $User): self
     {
         $this->User = $User;
+
+        return $this;
+    }
+
+    public function getArchiver(): ?bool
+    {
+        return $this->Archiver;
+    }
+
+    public function setArchiver(?bool $Archiver): self
+    {
+        $this->Archiver = $Archiver;
 
         return $this;
     }

@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '3e41992e04ac3081af5d72cd8c5b347ebe7c2af8',
+        'reference' => 'aec360af8b4563eead0283cbccd988c58228a5b4',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '3e41992e04ac3081af5d72cd8c5b347ebe7c2af8',
+            'reference' => 'aec360af8b4563eead0283cbccd988c58228a5b4',
             'dev_requirement' => false,
         ),
         'composer/package-versions-deprecated' => array(
@@ -255,6 +255,15 @@
             'replaced' => array(
                 0 => '^2.1',
             ),
+        ),
+        'omines/datatables-bundle' => array(
+            'pretty_version' => '0.5.5',
+            'version' => '0.5.5.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../omines/datatables-bundle',
+            'aliases' => array(),
+            'reference' => 'b8a16c365f9d8e97d1e890e8783249f979f0d7ca',
+            'dev_requirement' => false,
         ),
         'paragonie/random_compat' => array(
             'dev_requirement' => false,
@@ -1273,6 +1282,15 @@
             'aliases' => array(),
             'reference' => '9a906203efff7df59d1e0185f7aa05e631eb4ef7',
             'dev_requirement' => true,
+        ),
+        'symfony/webpack-encore-bundle' => array(
+            'pretty_version' => 'v1.14.0',
+            'version' => '1.14.0.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/webpack-encore-bundle',
+            'aliases' => array(),
+            'reference' => '1729c314574f32e49f9660a0cee870f7e603864f',
+            'dev_requirement' => false,
         ),
         'symfony/yaml' => array(
             'pretty_version' => 'v5.1.11',

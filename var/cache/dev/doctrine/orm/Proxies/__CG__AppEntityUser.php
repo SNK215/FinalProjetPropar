@@ -67,10 +67,10 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', 'confirm_password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'operations'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', 'confirm_password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'operations', '' . "\0" . 'App\\Entity\\User' . "\0" . 'NbOperationAutoriser', '' . "\0" . 'App\\Entity\\User' . "\0" . 'NbOperationEnCour'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', 'confirm_password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'operations'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\User' . "\0" . 'id', '' . "\0" . 'App\\Entity\\User' . "\0" . 'username', '' . "\0" . 'App\\Entity\\User' . "\0" . 'roles', '' . "\0" . 'App\\Entity\\User' . "\0" . 'password', 'confirm_password', '' . "\0" . 'App\\Entity\\User' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\User' . "\0" . 'operations', '' . "\0" . 'App\\Entity\\User' . "\0" . 'NbOperationAutoriser', '' . "\0" . 'App\\Entity\\User' . "\0" . 'NbOperationEnCour'];
     }
 
     /**
@@ -355,6 +355,50 @@ class User extends \App\Entity\User implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeOperation', [$operation]);
 
         return parent::removeOperation($operation);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getNbOperationAutoriser(): ?int
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNbOperationAutoriser', []);
+
+        return parent::getNbOperationAutoriser();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setNbOperationAutoriser(?int $NbOperationAutoriser): \App\Entity\User
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNbOperationAutoriser', [$NbOperationAutoriser]);
+
+        return parent::setNbOperationAutoriser($NbOperationAutoriser);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getNbOperationEnCour(): ?int
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getNbOperationEnCour', []);
+
+        return parent::getNbOperationEnCour();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setNbOperationEnCour(?int $NbOperationEnCour): \App\Entity\User
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNbOperationEnCour', [$NbOperationEnCour]);
+
+        return parent::setNbOperationEnCour($NbOperationEnCour);
     }
 
 }

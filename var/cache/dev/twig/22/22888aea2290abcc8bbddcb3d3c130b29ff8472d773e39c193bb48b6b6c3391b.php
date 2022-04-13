@@ -55,7 +55,7 @@ class __TwigTemplate_bfe2728114a71766a5cd8f164f4a77958bccc23b0a32be5e282bff2f5a0
 
     }
 
-    // line 3
+    // line 2
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -75,7 +75,7 @@ class __TwigTemplate_bfe2728114a71766a5cd8f164f4a77958bccc23b0a32be5e282bff2f5a0
 
     }
 
-    // line 6
+    // line 4
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -85,85 +85,138 @@ class __TwigTemplate_bfe2728114a71766a5cd8f164f4a77958bccc23b0a32be5e282bff2f5a0
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
-        echo "
-\t<h1 style=\"text-align:center\">Bienvenue sur votre tableau de bord</h1>
-
-\t<h2 style=\"margin-bottom: 0px; text-align: center;margin-top:20px;\">Opérations en cours</h2>
-\t<div style=\"display: flex; flex-wrap: wrap;justify-content:center \">
-\t\t";
-        // line 12
+        // line 5
+        echo "    <h1 style=\"text-align:center\">Bienvenue sur votre tableau de bord</h1>
+    <h1 style=\"; margin-bottom: 0px; text-align: center; \">Opérations en cours</h1>
+    <hr>
+    <div style=\"display: flex; flex-wrap: wrap;\">
+        ";
+        // line 9
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["Operations"]) || array_key_exists("Operations", $context) ? $context["Operations"] : (function () { throw new RuntimeError('Variable "Operations" does not exist.', 12, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["Operations"]) || array_key_exists("Operations", $context) ? $context["Operations"] : (function () { throw new RuntimeError('Variable "Operations" does not exist.', 9, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["Operation"]) {
-            // line 13
-            echo "\t\t\t";
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "user", [], "any", false, false, false, 13), twig_get_attribute($this->env, $this->source, $context["Operation"], "User", [], "any", false, false, false, 13)))) {
-                // line 14
-                echo "\t\t\t\t<div style=\"margin-left: 30px; margin-right: 100px; margin-bottom: 30px; margin-top: 30px;\">
-\t\t\t\t\t<div class=";
-                // line 15
-                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["Operation"], "type", [], "any", false, false, false, 15), "Grosse"))) {
-                    echo " \"card text-white bg-danger mb-3\" ";
-                }
-                echo " ";
-                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["Operation"], "type", [], "any", false, false, false, 15), "Moyenne"))) {
-                    echo " \"card text-white bg-warning mb-3\" ";
-                }
-                echo " ";
-                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["Operation"], "type", [], "any", false, false, false, 15), "Petite"))) {
-                    echo " \"card text-white bg-info mb-3\" ";
-                }
-                echo " style=\"max-width: 18rem;\">
-
-\t\t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t\t<h5 class=\"card-title\">
-\t\t\t\t\t\t\t\t";
-                // line 19
-                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["Operation"], "type", [], "any", false, false, false, 19), "Moyenne"))) {
-                    echo "Opération moyenne
-\t\t\t\t\t\t\t\t";
-                } else {
-                    // line 21
-                    echo "\t\t\t\t\t\t\t\t\t";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "type", [], "any", false, false, false, 21), "html", null, true);
+            // line 10
+            echo "            ";
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "user", [], "any", false, false, false, 10), twig_get_attribute($this->env, $this->source, $context["Operation"], "User", [], "any", false, false, false, 10)))) {
+                // line 11
+                echo "                ";
+                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["Operation"], "Archiver", [], "any", false, false, false, 11), true))) {
+                    // line 12
+                    echo "                    <div style=\"margin-left: 30px; margin-right: 100px; margin-bottom: 30px; margin-top: 20px;\">
+                        <div class=";
+                    // line 13
+                    if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["Operation"], "type", [], "any", false, false, false, 13), "Grosse"))) {
+                        echo " \"card text-white bg-danger mb-3\" ";
+                    }
+                    echo " ";
+                    if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["Operation"], "type", [], "any", false, false, false, 13), "Moyenne"))) {
+                        echo " \"card text-white bg-warning mb-3\" ";
+                    }
+                    echo " ";
+                    if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["Operation"], "type", [], "any", false, false, false, 13), "Petite"))) {
+                        echo " \"card text-white bg-info mb-3\" ";
+                    }
+                    echo " style=\"max-width: 18rem;\">
+                            <div class=\"card-body\">
+                                <h5 class=\"card-title\">";
+                    // line 15
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "type", [], "any", false, false, false, 15), "html", null, true);
                     echo "
-\t\t\t\t\t\t\t\t\topération";
+                                    opération</h5>
+                                <p class=\"card-text\">";
+                    // line 17
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "description", [], "any", false, false, false, 17), "html", null, true);
+                    echo "</p>
+                                <p class=\"card-text\">";
+                    // line 18
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "nom", [], "any", false, false, false, 18), "html", null, true);
+                    echo "
+                                    ";
+                    // line 19
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "prenom", [], "any", false, false, false, 19), "html", null, true);
+                    echo "</p>
+                                <p class=\"card-text\">";
+                    // line 20
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "adresse", [], "any", false, false, false, 20), "html", null, true);
+                    echo "</p>
+                                <a href=\"";
+                    // line 21
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("terminer_operation", ["id" => twig_get_attribute($this->env, $this->source, $context["Operation"], "id", [], "any", false, false, false, 21)]), "html", null, true);
+                    echo "\" class=\"btn btn-primary\">Terminer</a>
+                            </div>
+                        </div>
+                    </div>
+                ";
                 }
-                // line 22
-                echo "</h5>
-\t\t\t\t\t\t\t\t<p class=\"card-text\">";
-                // line 23
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "description", [], "any", false, false, false, 23), "html", null, true);
-                echo "</p>
-\t\t\t\t\t\t\t\t<p class=\"card-text\">";
-                // line 24
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "nom", [], "any", false, false, false, 24), "html", null, true);
-                echo "
-\t\t\t\t\t\t\t\t\t";
-                // line 25
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "prenom", [], "any", false, false, false, 25), "html", null, true);
-                echo "</p>
-\t\t\t\t\t\t\t\t<p class=\"card-text\">";
                 // line 26
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "adresse", [], "any", false, false, false, 26), "html", null, true);
-                echo "</p>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-primary\">Terminer</a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t";
+                echo "            ";
             }
-            // line 32
-            echo "\t\t\t";
+            // line 27
+            echo "        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['Operation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
-        echo "\t\t</div>
-
-\t";
+        // line 28
+        echo "    </div><br>
+    <h1 style=\"; margin-bottom: 0px; text-align: center; \">TERMINÉES</h1>
+    <hr>
+    <div style=\"display: flex; flex-wrap: wrap;\">
+        ";
+        // line 32
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["Operations"]) || array_key_exists("Operations", $context) ? $context["Operations"] : (function () { throw new RuntimeError('Variable "Operations" does not exist.', 32, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["Operation"]) {
+            // line 33
+            echo "            ";
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "user", [], "any", false, false, false, 33), twig_get_attribute($this->env, $this->source, $context["Operation"], "User", [], "any", false, false, false, 33)))) {
+                // line 34
+                echo "                ";
+                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["Operation"], "Archiver", [], "any", false, false, false, 34), false))) {
+                    // line 35
+                    echo "                    <div style=\"margin-left: 30px; margin-right: 100px; margin-bottom: 30px; margin-top: 20px;\">
+                        <div class=\"card text-white bg-dark mb-3\" style=\"max-width: 18rem;\">
+                            <div class=\"card-body\">
+                                <h5 class=\"card-title\">";
+                    // line 38
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "type", [], "any", false, false, false, 38), "html", null, true);
+                    echo "
+                                    opération</h5>
+                                <p class=\"card-text\">";
+                    // line 40
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "description", [], "any", false, false, false, 40), "html", null, true);
+                    echo "</p>
+                                <p class=\"card-text\">";
+                    // line 41
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "nom", [], "any", false, false, false, 41), "html", null, true);
+                    echo "
+                                    ";
+                    // line 42
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "prenom", [], "any", false, false, false, 42), "html", null, true);
+                    echo "</p>
+                                <p class=\"card-text\">";
+                    // line 43
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["Operation"], "adresse", [], "any", false, false, false, 43), "html", null, true);
+                    echo "</p>
+                                <button type=\"button\" class=\"btn btn-light\" disabled>
+                                    Terminer</button>
+                            </div>
+                        </div>
+                    </div>
+                ";
+                }
+                // line 50
+                echo "            ";
+            }
+            // line 51
+            echo "        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['Operation'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 52
+        echo "    </div>
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -184,46 +237,63 @@ class __TwigTemplate_bfe2728114a71766a5cd8f164f4a77958bccc23b0a32be5e282bff2f5a0
 
     public function getDebugInfo()
     {
-        return array (  164 => 33,  158 => 32,  149 => 26,  145 => 25,  141 => 24,  137 => 23,  134 => 22,  128 => 21,  123 => 19,  106 => 15,  103 => 14,  100 => 13,  96 => 12,  89 => 7,  79 => 6,  59 => 3,  36 => 1,);
+        return array (  218 => 52,  212 => 51,  209 => 50,  199 => 43,  195 => 42,  191 => 41,  187 => 40,  182 => 38,  177 => 35,  174 => 34,  171 => 33,  167 => 32,  161 => 28,  155 => 27,  152 => 26,  144 => 21,  140 => 20,  136 => 19,  132 => 18,  128 => 17,  123 => 15,  108 => 13,  105 => 12,  102 => 11,  99 => 10,  95 => 9,  89 => 5,  79 => 4,  59 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
-
 {% block title %}Page d'accueil
 {% endblock %}
-
 {% block body %}
-
-\t<h1 style=\"text-align:center\">Bienvenue sur votre tableau de bord</h1>
-
-\t<h2 style=\"margin-bottom: 0px; text-align: center;margin-top:20px;\">Opérations en cours</h2>
-\t<div style=\"display: flex; flex-wrap: wrap;justify-content:center \">
-\t\t{% for Operation in Operations %}
-\t\t\t{% if app.user == Operation.User %}
-\t\t\t\t<div style=\"margin-left: 30px; margin-right: 100px; margin-bottom: 30px; margin-top: 30px;\">
-\t\t\t\t\t<div class={% if Operation.type == \"Grosse\" %} \"card text-white bg-danger mb-3\" {% endif %} {% if Operation.type == \"Moyenne\" %} \"card text-white bg-warning mb-3\" {% endif %} {% if Operation.type == \"Petite\" %} \"card text-white bg-info mb-3\" {% endif %} style=\"max-width: 18rem;\">
-
-\t\t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t\t<h5 class=\"card-title\">
-\t\t\t\t\t\t\t\t{% if Operation.type == \"Moyenne\" %}Opération moyenne
-\t\t\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t\t\t{{ Operation.type }}
-\t\t\t\t\t\t\t\t\topération{% endif%}</h5>
-\t\t\t\t\t\t\t\t<p class=\"card-text\">{{ Operation.description }}</p>
-\t\t\t\t\t\t\t\t<p class=\"card-text\">{{ Operation.nom }}
-\t\t\t\t\t\t\t\t\t{{ Operation.prenom }}</p>
-\t\t\t\t\t\t\t\t<p class=\"card-text\">{{ Operation.adresse }}</p>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-primary\">Terminer</a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t{% endif %}
-\t\t\t{% endfor %}
-\t\t</div>
-
-\t{% endblock %}
-", "projet/home.html.twig", "C:\\Users\\User1\\Documents\\ProjetPropar\\templates\\projet\\home.html.twig");
+    <h1 style=\"text-align:center\">Bienvenue sur votre tableau de bord</h1>
+    <h1 style=\"; margin-bottom: 0px; text-align: center; \">Opérations en cours</h1>
+    <hr>
+    <div style=\"display: flex; flex-wrap: wrap;\">
+        {% for Operation in Operations %}
+            {% if app.user == Operation.User %}
+                {% if Operation.Archiver  == true %}
+                    <div style=\"margin-left: 30px; margin-right: 100px; margin-bottom: 30px; margin-top: 20px;\">
+                        <div class={% if Operation.type == \"Grosse\" %} \"card text-white bg-danger mb-3\" {% endif %} {% if Operation.type == \"Moyenne\" %} \"card text-white bg-warning mb-3\" {% endif %} {% if Operation.type == \"Petite\" %} \"card text-white bg-info mb-3\" {% endif %} style=\"max-width: 18rem;\">
+                            <div class=\"card-body\">
+                                <h5 class=\"card-title\">{{ Operation.type }}
+                                    opération</h5>
+                                <p class=\"card-text\">{{ Operation.description }}</p>
+                                <p class=\"card-text\">{{ Operation.nom }}
+                                    {{ Operation.prenom }}</p>
+                                <p class=\"card-text\">{{ Operation.adresse }}</p>
+                                <a href=\"{{ path(\"terminer_operation\", {\"id\" : Operation.id}) }}\" class=\"btn btn-primary\">Terminer</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div><br>
+    <h1 style=\"; margin-bottom: 0px; text-align: center; \">TERMINÉES</h1>
+    <hr>
+    <div style=\"display: flex; flex-wrap: wrap;\">
+        {% for Operation in Operations %}
+            {% if app.user == Operation.User %}
+                {% if Operation.Archiver  == false %}
+                    <div style=\"margin-left: 30px; margin-right: 100px; margin-bottom: 30px; margin-top: 20px;\">
+                        <div class=\"card text-white bg-dark mb-3\" style=\"max-width: 18rem;\">
+                            <div class=\"card-body\">
+                                <h5 class=\"card-title\">{{ Operation.type }}
+                                    opération</h5>
+                                <p class=\"card-text\">{{ Operation.description }}</p>
+                                <p class=\"card-text\">{{ Operation.nom }}
+                                    {{ Operation.prenom }}</p>
+                                <p class=\"card-text\">{{ Operation.adresse }}</p>
+                                <button type=\"button\" class=\"btn btn-light\" disabled>
+                                    Terminer</button>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}", "projet/home.html.twig", "C:\\Users\\User1\\Documents\\ProjetPropar\\templates\\projet\\home.html.twig");
     }
 }

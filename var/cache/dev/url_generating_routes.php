@@ -20,6 +20,7 @@ return [
     'app_delete' => [['id'], ['_controller' => 'App\\Controller\\ProjetController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/superadmin/delete']], [], []],
     'app_createOp' => [[], ['_controller' => 'App\\Controller\\ProjetController::CreateOp'], [], [['text', '/operation/create']], [], []],
     'app_operation' => [[], ['_controller' => 'App\\Controller\\ProjetController::listOperation'], [], [['text', '/operation']], [], []],
+    'terminer_operation' => [['id'], ['_controller' => 'App\\Controller\\ProjetController::terminer'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/operation/Terminer']], [], []],
     'app_registration' => [[], ['_controller' => 'App\\Controller\\SecurityController::registration'], [], [['text', '/superadmin/registration']], [], []],
     'app_edit_user' => [['id'], ['_controller' => 'App\\Controller\\SecurityController::registration'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/superadmin']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
