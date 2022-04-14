@@ -2,17 +2,19 @@
 
 namespace App\Controller;
 
+use DateTime;
 use App\Entity\User;
-use App\Entity\Operation;
 
+use App\Entity\Operation;
 use App\Form\OperationType;
 use App\Repository\UserRepository;
+use App\Repository\OperationRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\ChiffreAffaireRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use App\Repository\OperationRepository;
 
 class ProjetController extends AbstractController
 {
@@ -93,14 +95,41 @@ class ProjetController extends AbstractController
     /**
      * @Route("/operation/Terminer/{id}",  name="terminer_operation")
      */
-    public function terminer(Operation $op, EntityManagerInterface $manager,UserRepository $repo): Response {
+    public function terminer(Operation $op, EntityManagerInterface $manager, UserRepository $repo,ChiffreAffaireRepository $repoA): Response
+    {
+        $ca = $repoA->find(1);
+        if ($op->gettype() == "Petite") {
+            $ca->setValeur($ca->getValeur() + 1000);
+            $ca->setPetite($ca->getPetite() + 1000);
+        }elseif($op->gettype() == "Moyenne"){
+            $ca->setValeur($ca->getValeur() + 2500);
+            $ca->setMoyenne($ca->getMoyenne() + 2500);
+        }elseif ($op->gettype() == "Grosse") {
+            $ca->setValeur($ca->getValeur() + 10000);
+            $ca->setGrosse($ca->getGrosse() + 10000);
+        }
+        $ca->setDernierAjouts(DateTime::createFromFormat('d/m/Y à H:i',date('d/m/Y à H:i')));
         $user = $repo->find($this->getUser());
-        $user->setNbOperationEnCour(($user->getNbOperationEnCour()-1));
+        $user->setNbOperationEnCour(($user->getNbOperationEnCour() - 1));
+        $ca->setPourcentGrosse(($ca->getGrosse()*100)/$ca->getValeur());
+        $ca->setPourcentMoyenne(($ca->getMoyenne()*100)/$ca->getValeur());
+        $ca->setPourcentPetite(($ca->getPetite()*100)/$ca->getValeur());
         $op->setArchiver(false);
-        $manager->persist($op);
+        $manager->persist($op,$ca);
         $manager->flush();
         return $this->redirectToRoute('app_home');
-}
+    }
+
+    /**
+     * @Route("/superadmin/ca", name="aff_ca")
+     */
+    public function AfficherCA(ChiffreAffaireRepository $repo,EntityManagerInterface $manager)
+    {
+        $ca = $repo->find(1);
+        return $this->render('projet/AffChiAffaire.html.twig', [
+            'Chiffre' => $ca
+        ]);
+    }
     
 }
 

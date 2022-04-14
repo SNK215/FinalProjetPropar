@@ -20,7 +20,7 @@ class OperationType extends AbstractType
                     "Petite" => "Petite"
                 ],
                 ])
-            ->add('description')
+            ->add('description', TextAreaType::class)
             ->add('nom')
             ->add('prenom')
             ->add('adresse')

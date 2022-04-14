@@ -87,7 +87,7 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
         // line 33
         if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "user", [], "any", false, false, false, 33)) {
             // line 34
-            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/login\">Connexion</a>
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/login\" style=\"border : solid 1px ;border-radius:5px\">Connexion</a>
 \t\t\t\t\t\t";
         } else {
             // line 36
@@ -319,7 +319,7 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">
 \t\t\t\t\t<div class=\"navbar-nav \">
 \t\t\t\t\t\t{% if not app.user %}
-\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/login\">Connexion</a>
+\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/login\" style=\"border : solid 1px ;border-radius:5px\">Connexion</a>
 \t\t\t\t\t\t{% else %}
 \t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/logout\" style=\"border : solid 1px ;border-radius:5px\">Déconnexion</a>
 \t\t\t\t\t\t{% endif %}

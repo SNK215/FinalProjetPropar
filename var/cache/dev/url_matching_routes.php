@@ -17,6 +17,7 @@ return [
         '/profile/home' => [[['_route' => 'app_home', '_controller' => 'App\\Controller\\ProjetController::home'], null, null, null, false, false, null]],
         '/operation/create' => [[['_route' => 'app_createOp', '_controller' => 'App\\Controller\\ProjetController::CreateOp'], null, null, null, false, false, null]],
         '/operation' => [[['_route' => 'app_operation', '_controller' => 'App\\Controller\\ProjetController::listOperation'], null, null, null, false, false, null]],
+        '/superadmin/ca' => [[['_route' => 'aff_ca', '_controller' => 'App\\Controller\\ProjetController::AfficherCA'], null, null, null, false, false, null]],
         '/superadmin/registration' => [[['_route' => 'app_registration', '_controller' => 'App\\Controller\\SecurityController::registration'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, ['GET' => 0], null, false, false, null]],

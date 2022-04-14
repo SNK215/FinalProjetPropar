@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+{% block javascript %}{% endblock %}
+{% block body %}
+    <h1 style="text-align:center;">Chiffre d'affaire de l'entreprise</h1><br><br><br>
+    <h2 style="text-align:center; ">{{ Chiffre.valeur }}€</h2>
+    <div style="margin-left: 32%;  height: 35px; width: 500px;display: flex; box-shadow: 7px 5px 5px black;background-color: black;">
+        <div style="background-color: green; height: 35px; width: {{ Chiffre.pourcentPetite }}%;"></div>
+        <div style="background-color: orange; height: 35px; width: {{ Chiffre.pourcentMoyenne }}%;"></div>
+        <div style="background-color: red; height: 35px; width: {{ Chiffre.pourcentGrosse }}%;"></div>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 30px;">
+        <p>Grosse:
+            {{ Chiffre.pourcentGrosse }}%
+        </p>
+        <div style="background-color: red; height: 20px; width: 20px;"></div>
+    </div>
+    <div style="display: flex; justify-content: center; ">
+        <p>Moyenne:
+            {{ Chiffre.pourcentMoyenne }}%
+        </p>
+        <div style="background-color: orange; height: 20px; width: 20px;"></div>
+    </div>
+    <div style="display: flex; justify-content: center; ">
+        <p>Petite:
+            {{ Chiffre.pourcentPetite }}%
+        </p>
+        <div style="background-color: green; height: 20px; width: 20px;"></div>
+    </div>
+    <h5>Dernière Modification le
+        {{ Chiffre.dernierAjouts|date('d/m/Y')}}
+        à
+        {{ Chiffre.dernierAjouts|date('H:i')}}</h5>
+{% endblock %}
