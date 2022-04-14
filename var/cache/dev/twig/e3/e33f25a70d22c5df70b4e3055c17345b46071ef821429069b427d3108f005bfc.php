@@ -83,54 +83,44 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">
 \t\t\t\t\t<div class=\"navbar-nav \">
+\t\t\t\t\t\t
 \t\t\t\t\t\t";
-        // line 33
-        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "user", [], "any", false, false, false, 33)) {
-            // line 34
-            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/login\" style=\"border : solid 1px ;border-radius:5px\">Connexion</a>
-\t\t\t\t\t\t";
-        } else {
-            // line 36
-            echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/logout\" style=\"border : solid 1px ;border-radius:5px\">Déconnexion</a>
-\t\t\t\t\t\t";
-        }
-        // line 38
-        echo "\t\t\t\t\t\t";
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 38, $this->source); })()), "user", [], "any", false, false, false, 38)) {
-            // line 39
+        // line 34
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "user", [], "any", false, false, false, 34)) {
+            // line 35
             echo "\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/operation\">Mes opérations</a>
 \t\t\t\t\t\t";
         }
-        // line 41
+        // line 37
         echo "
 
 \t\t\t\t\t\t";
-        // line 43
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 43, $this->source); })()), "user", [], "any", false, false, false, 43)) {
-            // line 44
+        // line 39
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "user", [], "any", false, false, false, 39)) {
+            // line 40
             echo "\t\t\t\t\t\t\t";
-            if ((1 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 44, $this->source); })()), "user", [], "any", false, false, false, 44), "NbOperationAutoriser", [], "any", false, false, false, 44), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 44, $this->source); })()), "user", [], "any", false, false, false, 44), "NbOperationEnCour", [], "any", false, false, false, 44)))) {
-                // line 45
+            if ((1 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "user", [], "any", false, false, false, 40), "NbOperationAutoriser", [], "any", false, false, false, 40), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "user", [], "any", false, false, false, 40), "NbOperationEnCour", [], "any", false, false, false, 40)))) {
+                // line 41
                 echo "                                <a class=\"nav-link\" href=\"/operation/create\">Ajout opération</a>
                             ";
             }
-            // line 47
+            // line 43
             echo "                            ";
-            if ((0 >= twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 47, $this->source); })()), "user", [], "any", false, false, false, 47), "NbOperationAutoriser", [], "any", false, false, false, 47), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 47, $this->source); })()), "user", [], "any", false, false, false, 47), "NbOperationEnCour", [], "any", false, false, false, 47)))) {
-                // line 48
+            if ((0 >= twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 43, $this->source); })()), "user", [], "any", false, false, false, 43), "NbOperationAutoriser", [], "any", false, false, false, 43), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 43, $this->source); })()), "user", [], "any", false, false, false, 43), "NbOperationEnCour", [], "any", false, false, false, 43)))) {
+                // line 44
                 echo "\t\t\t\t\t\t\t\t        <a class=\"nav-link disabled\" href=\"/operation/create\">Ajout opération</a>
                             ";
             }
-            // line 50
+            // line 46
             echo "\t\t\t\t\t\t";
         }
-        // line 51
+        // line 47
         echo "
 
 \t\t\t\t\t\t";
-        // line 53
+        // line 49
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_SUPER_ADMIN")) {
-            // line 54
+            // line 50
             echo "\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
 \t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
 \t\t\t\t\t\t\t\t\tGestion d'utilisateurs
@@ -146,16 +136,27 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         }
-        // line 68
+        // line 64
+        echo "\t\t\t\t\t\t";
+        if ( !twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 64, $this->source); })()), "user", [], "any", false, false, false, 64)) {
+            // line 65
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link position-absolute\"  href=\"/login\" style=\"border : solid 1px ;border-radius:5px ;right: 10px; top: 5px\">Connexion</a>
+\t\t\t\t\t\t";
+        } else {
+            // line 67
+            echo "\t\t\t\t\t\t\t<a class=\"nav-link position-absolute\" href=\"/logout\" style=\"border : solid 1px ;border-radius:5px;right: 10px; top: 5px\">Déconnexion</a>
+\t\t\t\t\t\t";
+        }
+        // line 69
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
 \t\t";
-        // line 73
-        $this->displayBlock('body', $context, $blocks);
         // line 74
+        $this->displayBlock('body', $context, $blocks);
+        // line 75
         echo "\t</body>
 </html>
 ";
@@ -199,9 +200,8 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
 
         // line 12
         echo "\t\t\t";
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("app");
-        echo "
-\t\t";
+        // line 13
+        echo "\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -222,9 +222,8 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
 
         // line 16
         echo "\t\t\t";
-        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
-        echo "
-\t\t";
+        // line 17
+        echo "\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -251,7 +250,7 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
 
     }
 
-    // line 73
+    // line 74
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -281,7 +280,7 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
 
     public function getDebugInfo()
     {
-        return array (  255 => 73,  237 => 22,  224 => 16,  214 => 15,  201 => 12,  191 => 11,  171 => 6,  159 => 74,  157 => 73,  150 => 68,  134 => 54,  132 => 53,  128 => 51,  125 => 50,  121 => 48,  118 => 47,  114 => 45,  111 => 44,  109 => 43,  105 => 41,  101 => 39,  98 => 38,  94 => 36,  90 => 34,  88 => 33,  76 => 23,  74 => 22,  68 => 18,  66 => 15,  63 => 14,  60 => 11,  57 => 8,  55 => 6,  48 => 1,);
+        return array (  254 => 74,  236 => 22,  226 => 17,  224 => 16,  214 => 15,  204 => 13,  202 => 12,  192 => 11,  172 => 6,  160 => 75,  158 => 74,  151 => 69,  147 => 67,  143 => 65,  140 => 64,  124 => 50,  122 => 49,  118 => 47,  115 => 46,  111 => 44,  108 => 43,  104 => 41,  101 => 40,  99 => 39,  95 => 37,  91 => 35,  89 => 34,  76 => 23,  74 => 22,  68 => 18,  66 => 15,  63 => 14,  60 => 11,  57 => 8,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -297,11 +296,11 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
 \t\t{# Run `composer require symfony/webpack-encore-bundle`
 \t\t\t\t\t\t\t\t           and uncomment the following Encore helpers to start using Symfony UX #}
 \t\t{% block stylesheets %}
-\t\t\t{{ encore_entry_link_tags('app') }}
+\t\t\t{# {{ encore_entry_link_tags('app') }} #}
 \t\t{% endblock %}
 
 \t\t{% block javascripts %}
-\t\t\t{{ encore_entry_script_tags('app') }}
+\t\t\t{# {{ encore_entry_script_tags('app') }} #}
 \t\t{% endblock %}
 
 \t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">
@@ -318,11 +317,7 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarNavAltMarkup\">
 \t\t\t\t\t<div class=\"navbar-nav \">
-\t\t\t\t\t\t{% if not app.user %}
-\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/login\" style=\"border : solid 1px ;border-radius:5px\">Connexion</a>
-\t\t\t\t\t\t{% else %}
-\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/logout\" style=\"border : solid 1px ;border-radius:5px\">Déconnexion</a>
-\t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t
 \t\t\t\t\t\t{% if app.user %}
 \t\t\t\t\t\t\t<a class=\"nav-link\" href=\"/operation\">Mes opérations</a>
 \t\t\t\t\t\t{% endif %}
@@ -353,6 +348,11 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t{% endif %}
+\t\t\t\t\t\t{% if not app.user %}
+\t\t\t\t\t\t\t<a class=\"nav-link position-absolute\"  href=\"/login\" style=\"border : solid 1px ;border-radius:5px ;right: 10px; top: 5px\">Connexion</a>
+\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t<a class=\"nav-link position-absolute\" href=\"/logout\" style=\"border : solid 1px ;border-radius:5px;right: 10px; top: 5px\">Déconnexion</a>
+\t\t\t\t\t\t{% endif %}
 
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -361,6 +361,6 @@ class __TwigTemplate_1b78800e38dbbc6e06b473da6fd9b023b1de0d08ef0945b27e2be9caa9e
 \t\t{% block body %}{% endblock %}
 \t</body>
 </html>
-", "base.html.twig", "C:\\Users\\User1\\Documents\\ProjetPropar\\templates\\base.html.twig");
+", "base.html.twig", "C:\\nv_version_PROPAR\\FinalProjetPropar\\templates\\base.html.twig");
     }
 }

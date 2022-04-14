@@ -80,17 +80,6 @@ class SecurityController extends AbstractController
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
 
-    /**
-     * @Route("/superadmin/show", name="app_show_users")
-     */
-    public function show(UserRepository $repo): Response
-    {
-        $users = $repo->findAll();
-        return $this->render('security/show.html.twig', [
-            'controller_name' => 'SecurityController',
-            "users" => $users
-        ]);
-    }
 
 
 }

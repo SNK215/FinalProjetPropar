@@ -21,7 +21,6 @@ return [
         '/superadmin/registration' => [[['_route' => 'app_registration', '_controller' => 'App\\Controller\\SecurityController::registration'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, ['GET' => 0], null, false, false, null]],
-        '/superadmin/show' => [[['_route' => 'app_show_users', '_controller' => 'App\\Controller\\SecurityController::show'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

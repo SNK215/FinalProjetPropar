@@ -26,5 +26,4 @@ return [
     'app_edit_user' => [['id'], ['_controller' => 'App\\Controller\\SecurityController::registration'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/superadmin']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
-    'app_show_users' => [[], ['_controller' => 'App\\Controller\\SecurityController::show'], [], [['text', '/superadmin/show']], [], []],
 ];

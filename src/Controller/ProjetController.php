@@ -21,14 +21,16 @@ class ProjetController extends AbstractController
     /**
      * @Route("/", name="app_index")
      */
-    public function index(UserRepository $repoUser, OperationRepository $repoOp): Response
+    public function index(UserRepository $repoUser, OperationRepository $repoOp,ChiffreAffaireRepository $repo): Response
     {
+        $ca = $repo->find(1);
         $users = $repoUser->findAll();
         $operations = $repoOp->findAll();
         return $this->render('projet/index.html.twig', [
             'controller_name' => 'ProjetController',
             "users" => $users,
-            "operations" => $operations
+            "operations" => $operations,
+            'Chiffre' => $ca
         ]);
     }
 

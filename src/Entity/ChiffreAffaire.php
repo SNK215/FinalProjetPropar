@@ -28,17 +28,17 @@ class ChiffreAffaire
     private $dernierAjouts;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="decimal", nullable=true)
      */
     private $pourcentPetite;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="decimal", nullable=true)
      */
     private $pourcentMoyenne;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="decimal", nullable=true)
      */
     private $pourcentGrosse;
 
@@ -86,36 +86,36 @@ class ChiffreAffaire
         return $this;
     }
 
-    public function getPourcentPetite(): ?int
+    public function getPourcentPetite(): ?float
     {
         return $this->pourcentPetite;
     }
 
-    public function setPourcentPetite(?int $pourcentPetite): self
+    public function setPourcentPetite(?float $pourcentPetite): self
     {
         $this->pourcentPetite = $pourcentPetite;
 
         return $this;
     }
 
-    public function getPourcentMoyenne(): ?int
+    public function getPourcentMoyenne(): ?float
     {
         return $this->pourcentMoyenne;
     }
 
-    public function setPourcentMoyenne(?int $pourcentMoyenne): self
+    public function setPourcentMoyenne(?float $pourcentMoyenne): self
     {
         $this->pourcentMoyenne = $pourcentMoyenne;
 
         return $this;
     }
 
-    public function getPourcentGrosse(): ?int
+    public function getPourcentGrosse(): ?float
     {
         return $this->pourcentGrosse;
     }
 
-    public function setPourcentGrosse(?int $pourcentGrosse): self
+    public function setPourcentGrosse(?float $pourcentGrosse): self
     {
         $this->pourcentGrosse = $pourcentGrosse;
 
